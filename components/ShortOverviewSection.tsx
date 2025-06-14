@@ -12,13 +12,15 @@ const posts = [
         date: 'Mar 16, 2020',
         datetime: '2020-03-16',
         category: { title: 'Marketing', href: '#' },
-        author: {
-            name: 'Jane Doe',
-            role: 'Physiotherapeut',
-            href: '#',
-            imageUrl:
-                '/profiles/profile1.jpg',
-        },
+        author: [
+            {
+                name: 'Voornaam Achternaam',
+                role: 'Physiotherapeut',
+                href: '#',
+                imageUrl:
+                    '/profiles/profile1.jpg',
+            }
+        ],
     },
     {
         id: 2,
@@ -31,32 +33,22 @@ const posts = [
         date: 'Mar 16, 2020',
         datetime: '2020-03-16',
         category: { title: 'Marketing', href: '#' },
-        author: {
-            name: 'Jane Doe',
-            role: 'Logopedist',
-            href: '#',
-            imageUrl:
-                '/profiles/profile2.jpg',
-        },
-    },
-    {
-        id: 3,
-        title: 'Therapie',
-        href: '#',
-        description:
-            'Onze therapeut is gespecialiseerd in het behandelen van aandoeningen van de spieren, gewrichten en zenuwen. Hij kan je helpen met pijn, vermoeidheid, bewegingsbeperkingen en meer.',
-        imageUrl:
-            '/images/therapy.jpg',
-        date: 'Mar 16, 2020',
-        datetime: '2020-03-16',
-        category: { title: 'Marketing', href: '#' },
-        author: {
-            name: 'Jane Doe',
-            role: 'Therapeut',
-            href: '#',
-            imageUrl:
-                '/profiles/profile3.jpg',
-        },
+        author: [
+            {
+                name: 'Voornaam Achternaam',
+                role: 'Logopedist',
+                href: '#',
+                imageUrl:
+                    '/profiles/profile2.jpg',
+            },
+            {
+                name: 'Voornaam Achternaam',
+                role: 'Logopedist 2',
+                href: '#',
+                imageUrl:
+                    '/profiles/profile3.jpg',
+            }
+        ],
     }
 ]
 
@@ -72,7 +64,7 @@ export default function ShortOverviewSection() {
                         In onze praktijk werken we met een multidisciplinaire benadering, waarbij we samenwerken met andere professionals om de beste oplossing te bieden voor elke cliënt.
                     </p>
                 </div>
-                <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+                <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                     {posts.map((post) => (
                         <article key={post.id} className="flex flex-col items-start justify-between">
                             <div className="relative w-full">
@@ -96,16 +88,20 @@ export default function ShortOverviewSection() {
                                     <p className="mt-5 line-clamp-3 text-sm/6 text-gray-600">{post.description}</p>
                                 </div>
                                 <div className="relative mt-8 flex items-center gap-x-4">
-                                    <Image alt="" src={post.author.imageUrl} className="size-20 rounded-full bg-gray-100 object-cover" width={40} height={40} />
-                                    <div className="text-sm/6">
-                                        <p className="font-semibold text-gray-900">
-                                            <a href={post.author.href}>
-                                                <span className="absolute inset-0" />
-                                                {post.author.name}
-                                            </a>
-                                        </p>
-                                        <p className="text-gray-600">{post.author.role}</p>
-                                    </div>
+                                    {post.author.map((author, index) => (
+                                        <div key={index}>
+                                            <Image alt="" src={author.imageUrl} className="size-20 rounded-full bg-gray-100 object-cover" width={40} height={40} />
+                                            <div className="text-sm/6">
+                                                <p className="font-semibold text-gray-900">
+                                                    <a href={author.href}>
+                                                        <span className="absolute inset-0" />
+                                                        {author.name}
+                                                    </a>
+                                                </p>
+                                                <p className="text-gray-600">{author.role}</p>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </article>

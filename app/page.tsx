@@ -3,7 +3,6 @@ import VisieSection from "@/components/VisieSection";
 import ShortOverviewSection from "@/components/ShortOverviewSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
-import FooterSection from "@/components/FooterSection";
 
 export default function Home() {
   return (
@@ -23,7 +22,6 @@ export default function Home() {
       <section id="contact">
         <ContactSection />
       </section>
-      <FooterSection />
     </div>
   );
 }

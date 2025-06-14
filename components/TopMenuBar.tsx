@@ -4,32 +4,42 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { usePathname } from 'next/navigation'
 
 const navigation = [
     { name: 'Home', href: '/#hero' },
-    { name: 'Over ons', href: '/#visie' },
-    { name: 'Behandelingen', href: '/#short-overview' },
-    { name: 'Testimonials', href: '/#testimonials' },
-    { name: 'Contact', href: '/#contact' },
+    { name: 'Over ons', href: '/over-ons' },
+    { name: 'Diensten', href: '/diensten' },
+    { name: 'Werkwijze', href: '/werkwijze' },
+    { name: 'Contact', href: '/contact' },
 ]
 
 export default function TopMenuBar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [isScrolled, setIsScrolled] = useState(false);
+    const pathname = usePathname();
 
     const handleScroll = () => {
         const scrollPosition = window.scrollY;
-        if (scrollPosition > 100) {
-            setIsScrolled(true);
+        if (pathname === '/') {
+            if (scrollPosition > 100) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
         } else {
-            setIsScrolled(false);
+            setIsScrolled(true);
         }
     };
 
     useEffect(() => {
+        // Set initial state based on current page
+        if (pathname !== '/') {
+            setIsScrolled(true);
+        }
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [pathname]);
 
     return (
         <header className="fixed inset-x-0 top-0 z-50">

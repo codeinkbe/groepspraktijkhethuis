@@ -5,8 +5,8 @@ import Image from 'next/image'
 export default function HeroSection() {
 
     return (
-        <div className="bg-gray-900">
-            <div className="relative isolate overflow-hidden pt-14">
+        <div className="bg-gray-900 min-h-screen">
+            <div className="relative isolate overflow-hidden pt-14 min-h-screen flex items-center justify-center">
                 <Image
                     alt=""
                     src="/heroimage.jpg"
@@ -29,8 +29,8 @@ export default function HeroSection() {
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
                         <div className="text-center">
-                            <h1 className="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">
-                                Welkom bij Groepspraktijk het huis
+                            <h1 className="text-5xl font-semibold  tracking-tight text-balance text-white sm:text-7xl">
+                                Groepspraktijk het huis
                             </h1>
                             <p className="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">
                                 Multidisciplinaire praktijk voor kinderen en volwassenen, gespecialiseerd in logopedie, kinesitherapie en persoonlijke begeleiding op maat.
@@ -42,8 +42,8 @@ export default function HeroSection() {
                                 >
                                     Contacteer ons
                                 </a>
-                                <a href="#" className="text-sm/6 font-semibold text-white">
-                                    Wie zijn wij? <span aria-hidden="true">→</span>
+                                <a href="#visie" className="text-sm/6 font-semibold text-white">
+                                    Onze visie <span aria-hidden="true">→</span>
                                 </a>
                             </div>
                         </div>
