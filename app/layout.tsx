@@ -1,22 +1,32 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import TopMenuBar from "@/components/TopMenuBar";
-import FooterSection from "@/components/FooterSection";
+import TopMenuBar from "@/app/components/TopMenuBar";
+import FooterSection from "@/app/components/FooterSection";
+import localFont from "next/font/local";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const acuminRegular = localFont({
+  src: "../public/font/Acumin-RPro.woff",
+  variable: "--font-acumin-regular",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const acuminItalic = localFont({
+  src: "../public/font/Acumin-ItPro.woff",
+  variable: "--font-acumin-italic",
+});
+
+const acuminBold = localFont({
+  src: "../public/font/Acumin-BdPro.woff",
+  variable: "--font-acumin-bold",
+});
+
+const acuminBoldItalic = localFont({
+  src: "../public/font/Acumin-BdItPro.woff",
+  variable: "--font-acumin-bold-italic",
 });
 
 export const metadata: Metadata = {
   title: "Groepspraktijk het huis",
-  description: "Groepspraktijk het huis",
+  description: "Groepspraktijk voor kinderen",
 };
 
 export default function RootLayout({
@@ -27,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${acuminRegular.variable} ${acuminItalic.variable} ${acuminBold.variable} ${acuminBoldItalic.variable} antialiased bg-cream`}
       >
         <TopMenuBar />
         {children}

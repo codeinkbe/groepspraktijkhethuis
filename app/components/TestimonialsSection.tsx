@@ -2,33 +2,16 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { TestimonialType } from '@/app/page'
 
-const testimonials = [
-    {
-        name: "Jolien",
-        text: "Ik heb geleerd dat ik meer kan dan ik dacht. Ik heb geleerd dat ik meer kan dan ik dacht. Ik heb geleerd dat ik meer kan dan ik dacht.",
-    },
-    {
-        name: "Jasper",
-        text: "Dankzij deze praktijk heb ik mijn zelfvertrouwen terug gekregen. Ik heb geleerd dat ik meer kan dan ik dacht. Ik heb geleerd dat ik meer kan dan ik dacht. Ik heb geleerd dat ik meer kan dan ik dacht.",
-    },
-    {
-        name: "Joris",
-        text: "Ik heb bij Het Huis geleerd dat ik meer kan dan ik dacht. Ik heb geleerd dat ik meer kan dan ik dacht. Ik heb geleerd dat ik meer kan dan ik dacht.",
-    },
-    {
-        name: "Natalie",
-        text: "Het is een geweldige praktijk met een geweldige team. Ik heb geleerd dat ik meer kan dan ik dacht. Ik heb geleerd dat ik meer kan dan ik dacht. Ik heb geleerd dat ik meer kan dan ik dacht.",
-    },
-]
 
-export default function TestimonialsSection() {
+export default function TestimonialsSection({testimonialsList}: {testimonialsList: TestimonialType}) {
     const [currentIndex, setCurrentIndex] = useState(0)
 
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => 
-                prevIndex + 2 >= testimonials.length ? 0 : prevIndex + 2
+                prevIndex + 2 >= testimonialsList.length ? 0 : prevIndex + 2
             )
         }, 10000) // Change every 5 seconds
 
@@ -36,12 +19,12 @@ export default function TestimonialsSection() {
     }, [])
 
     const visibleTestimonials = [
-        testimonials[currentIndex],
-        testimonials[(currentIndex + 1) % testimonials.length]
+        testimonialsList[currentIndex],
+        testimonialsList[(currentIndex + 1) % testimonialsList.length]
     ]
 
     return (
-        <section className="bg-white py-24 sm:py-32">
+        <section className="bg-cream py-24 sm:py-32" id="testimonials">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto grid grid-cols-1 max-w-2xl lg:mx-0 lg:max-w-none lg:grid-cols-2">
                     <AnimatePresence mode="wait">

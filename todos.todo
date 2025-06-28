@@ -1,0 +1,121 @@
+General:
+  ☐ add favicon
+  ☐ add metadata
+  ☐ implement Plausible analytics
+  ☐ optomize for mobile @critical
+
+Tailwind:
+  ☐ add header 1 style
+  ☐ add header 2 style
+  ☐ add paragraph style
+  ☐ add button style
+  ☐ add line element style
+
+Topmenubar:
+  ☐ when not scrolled the 'Afspraak button' should be invisible (just like the logo)
+
+Footer:
+  ☐ remove logos at 'adres hier', 'telefoonnummer hier', 'email hier'
+  ☐ add sitemap link
+
+Homepage:
+  ☐ add metadata
+  Herosection:
+    ☐ Streamline the rive animation (laatste seconde fixen)
+    ☐ min-h-screen fixen
+    ☐ Contacteer ons button -> should be 'Afspraak maken
+    ☐ onze visie button arrow should point down
+    ☐ buttons linken
+
+  Onze Visie section:
+    ☐ header 1 style toepassen
+    ☐ paragraph style toepassen
+    ☐ line elementen toevoegen
+
+  Onze Praktijk section:
+    ☐ kleuren fixen
+    ☐ header 1 style toepassen
+    ☐ paragraph style toepassen
+    ☐ line elementen toevoegen
+    ☐ team fotos verwijderen
+
+  Testimonials section:
+    ☐ header toevoegen met header 1 style
+    ☐ fixed height fixen
+    ☐ left and right arrows fixen
+
+  Contact section:
+    ☐ simplefy contact section with button to contact page
+
+Diensten:
+  ☐ add metadata
+  Header:
+    ☐ add header 1 style
+    ☐ add paragraph style
+
+  Overzicht Kinesitherapie:
+    ☐ add header 1 style
+    ☐ add paragraph style
+
+  Overzicht Logopedie:
+    ☐ add header 1 style
+    ☐ add paragraph style
+
+Onze Werkwijze:
+  ☐ add metadata
+  Header:
+    ☐ add header 1 style
+    ☐ add paragraph style
+
+  Hoe aanmelden:
+    ☐ add header 1 style
+    ☐ add paragraph style
+
+  Wachttijden:
+    ☐ add header 1 style
+    ☐ add paragraph style
+
+  Tarieven:
+    ☐ add header 1 style
+    ☐ add paragraph style
+  
+  Annulatiebeleid:
+    ☐ add header 1 style
+    ☐ add paragraph style
+
+Veelgestelde vragen:
+  ☐ add metadata
+  ☐ Add faq banner
+
+Contact:
+  ☐ add metadata
+  Header:
+    ☐ add header 1 style
+    ☐ add paragraph style
+
+  Contactformulier:
+    ☐ add contactformulier from tailwindui
+    ☐ mail formulier to info@groepspraktijkhethuis.be
+
+Privacy Policy:
+  ☐ add privacy policy page
+
+Algemene voorwaarden:
+  ☐ add algemene voorwaarden page
+
+Cookiebeleid:
+  ☐ add cookiebeleid page
+
+Cookiebanner:
+  ☐ add cookiebanner from tailwindui
+
+404:
+  ☐ add 404 page
+
+500:
+  ☐ add 500 page
+
+Sitemap:
+  ☐ add sitemap page
+
+

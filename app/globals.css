@@ -1,5 +1,41 @@
 @import "tailwindcss";
 
+@theme {
+  /* Main brand colors */
+  --color-cream: #f7efe1; /* Warm cream - primary background */
+  --color-orange: #f15e2c; /* Vibrant orange - primary accent */
+  --color-navy: #416a7b; /* Deep navy - primary text/headers */
+  --color-sky: #c4e2f7; /* Light sky blue - secondary accent */
+
+  /* Extended palette with variations */
+  --color-cream-light: #fefaf5; /* Lighter cream for subtle backgrounds */
+  --color-cream-dark: #f5e8d8; /* Darker cream for borders */
+
+  --color-orange-light: #ff7a33; /* Lighter orange for hover states */
+  --color-orange-dark: #e64a00; /* Darker orange for pressed states */
+
+  --color-navy-light: #5a7a8f; /* Lighter navy for secondary text */
+  --color-navy-dark: #2c4a5f; /* Darker navy for emphasis */
+
+  --color-sky-light: #e8f4ff; /* Lighter sky for backgrounds */
+  --color-sky-dark: #b8d6f0; /* Darker sky for borders */
+
+  /* Semantic colors using the palette */
+  --color-primary: #ff5203; /* Orange as primary */
+  --color-secondary: #436a7d; /* Navy as secondary */
+  --color-accent: #d1e8ff; /* Sky blue as accent */
+  --color-background: #faf2e8; /* Cream as main background */
+  --color-text: #436a7d; /* Navy as main text */
+  --color-text-light: #5a7a8f; /* Lighter navy for secondary text */
+  --color-border: #f5e8d8; /* Darker cream for borders */
+
+  /* Font families */
+  --font-acumin-regular: "Acumin-RPro", sans-serif;
+  --font-acumin-italic: "Acumin-ItPro", sans-serif;
+  --font-acumin-bold: "Acumin-BdPro", sans-serif;
+  --font-acumin-bold-italic: "Acumin-BdItPro", sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
 }
