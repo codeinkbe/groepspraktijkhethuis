@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Groepspraktijk Het Huis
 
-## Getting Started
+A modern, responsive website for a multidisciplinary healthcare practice specializing in physiotherapy and speech therapy services.
 
-First, run the development server:
+## 🏥 About
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Groepspraktijk Het Huis is a multidisciplinary practice offering personalized care for both children and adults. The practice specializes in:
+
+- **Physiotherapy** - Treatment of muscle, joint, and nerve conditions
+- **Speech Therapy** - Treatment of speech, language, and communication disorders
+- **Personal Guidance** - Tailored support and counseling
+
+## 🚀 Tech Stack
+
+- **Framework**: Next.js 15.3.3 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **UI Components**: DaisyUI
+- **Animations**: Framer Motion
+- **Rich Text**: TipTap
+- **Icons**: Heroicons
+- **Interactive Graphics**: Rive
+
+## 📁 Project Structure
+
+```
+groepspraktijkhethuis/
+├── app/                    # Next.js App Router
+│   ├── components/         # Reusable UI components
+│   ├── contact/           # Contact page
+│   ├── diensten/          # Services page
+│   ├── over-ons/          # About us page
+│   └── ...                # Other pages
+├── lib/                   # Utility functions and animations
+├── public/                # Static assets (images, fonts, etc.)
+└── package.json           # Dependencies and scripts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js 18+ 
+- npm or yarn
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository:
+```bash
+git clone [repository-url]
+cd groepspraktijkhethuis
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Run the development server:
+```bash
+npm run dev
+```
 
-## Deploy on Vercel
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📜 Available Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `npm run dev` - Start development server with Turbopack
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## 🎨 Key Features
+
+- **Responsive Design** - Optimized for all device sizes
+- **Modern Animations** - Smooth transitions with Framer Motion
+- **SEO Optimized** - Meta tags, Open Graph, and structured data
+- **Accessibility** - WCAG compliant components
+- **Performance** - Optimized images and fast loading times
+
+## 📱 Pages
+
+- **Home** - Landing page with hero section and services overview
+- **About Us** - Information about the practice and team
+- **Services** - Detailed service descriptions
+- **Contact** - Contact information and appointment booking
+- **Legal Pages** - Privacy policy, terms, cookies, etc.
+
+## 🎯 Learning Focus
+
+This project demonstrates:
+
+1. **Next.js App Router** - Modern routing and server components
+2. **TypeScript** - Type-safe development
+3. **Tailwind CSS** - Utility-first styling
+4. **Component Architecture** - Reusable, maintainable components
+5. **Animation Integration** - Smooth user experience
+6. **SEO Best Practices** - Search engine optimization
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## 📄 License
+
+This project is private and proprietary to Groepspraktijk Het Huis.
+
+## 📞 Contact
+
+For questions about this website or the practice, please visit the contact page on the website.
