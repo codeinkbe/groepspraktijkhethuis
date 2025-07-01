@@ -56,12 +56,22 @@ cd groepspraktijkhethuis
 npm install
 ```
 
-3. Run the development server:
+3. Set up email configuration:
+   Create a `.env.local` file in the root directory with:
+   ```
+   EMAIL_USER=your-email@gmail.com
+   EMAIL_PASS=your-app-password
+   ```
+   
+   **Note**: For Gmail, you'll need to use an "App Password" instead of your regular password. 
+   Enable 2-factor authentication and generate an app password in your Google Account settings.
+
+4. Run the development server:
 ```bash
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## 📜 Available Scripts
 

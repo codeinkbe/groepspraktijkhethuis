@@ -1,13 +1,14 @@
 const navigation = {
   services: [
-    { name: 'Kinesitherapie', href: '/diensten' },
-    { name: 'Logopedie', href: '/diensten' },
-    { name: 'Persoonlijke begeleiding', href: '/diensten' },
+    { name: 'Kinesitherapie', href: '/diensten#kinesitherapie' },
+    { name: 'Logopedie', href: '/diensten#logopedie' },
   ],
   pages: [
     { name: 'Home', href: '/' },
+    { name: 'Diensten', href: '/diensten' },
     { name: 'Over ons', href: '/over-ons' },
     { name: 'Werkwijze', href: '/werkwijze' },
+    { name: 'Veelgestelde vragen', href: '/veelgestelde-vragen' },
     { name: 'Contact', href: '/contact' },
   ],
   legal: [
@@ -58,9 +59,9 @@ export default function FooterSection() {
               Multidisciplinaire praktijk voor kinderen en volwassenen, gespecialiseerd in logopedie, kinesitherapie en persoonlijke begeleiding op maat.
             </p>
             <div className="space-y-2 text-cream-light">
-              <p>📍 Adres hier</p>
-              <p>📞 Telefoonnummer hier</p>
-              <p>✉️ Email hier</p>
+              <p>Adres</p>
+              <p>+32 475 00 00 00</p>
+              <p>info@groepspraktijkhethuis.be</p>
             </div>
           </div>
 

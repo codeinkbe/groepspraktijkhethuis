@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline'
 import { usePathname } from 'next/navigation'
+import Link from 'next/link';
 
 const navigation = [
     {
@@ -16,8 +17,8 @@ const navigation = [
     },
     {
         name: 'Diensten', href: '/diensten', submenu: [
-            { name: 'Kinesitherapie', href: '/diensten#kinesitherapie' },
             { name: 'Logopedie', href: '/diensten#logopedie' },
+            { name: 'Kinesitherapie', href: '/diensten#kinesitherapie' },
         ]
     },
     {
@@ -27,7 +28,7 @@ const navigation = [
         name: 'Werkwijze', href: '/werkwijze', submenu: [
             { name: 'Hoe aanmelden', href: '/werkwijze#hoe-aanmelden' },
             { name: 'Wachttijd', href: '/werkwijze#wachttijd' },
-            { name: 'Tarieven', href: '/werkwijze#tarieven' },
+            { name: 'Tarieven', href: '/werkwijze#afspraak' },
             { name: 'Annulatiebeleid', href: '/werkwijze#annulatiebeleid' },
         ]
     },
@@ -66,7 +67,7 @@ export default function TopMenuBar() {
         <header className="fixed inset-x-0 top-0 z-50">
             <nav aria-label="Global" className={`flex items-center justify-between lg:px-8 ${isScrolled ? 'bg-white/70 backdrop-blur-sm shadow-xs' : ''} transition-all duration-300 h-24`}>
                 <div className={`flex lg:flex-1`}>
-                    <a href="#" className={`-m-1.5 p-1.5 ${isScrolled ? 'block' : 'hidden'}`}>
+                    <Link href="/" className={`-m-1.5 p-1.5 ${isScrolled ? 'block' : 'hidden'}`}>
                         <span className="sr-only">Groepspraktijk Het Huis</span>
                         <Image
                             alt=""
@@ -75,13 +76,13 @@ export default function TopMenuBar() {
                             height={100}
                             className="h-24 w-auto"
                         />
-                    </a>
+                    </Link>
                 </div>
                 <div className="flex lg:hidden">
                     <button
                         type="button"
                         onClick={() => setMobileMenuOpen(true)}
-                        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-cream"
+                        className={`-m-2.5 inline-flex items-center justify-center rounded-md p-6 transition-colors ${isScrolled ? 'text-navy' : 'text-white'}`}
                     >
                         <span className="sr-only">Open main menu</span>
                         <Bars3Icon aria-hidden="true" className="size-6" />
@@ -90,9 +91,9 @@ export default function TopMenuBar() {
                 <div className="hidden lg:flex lg:gap-x-12">
                     {navigation.map((item) => (
                         <div key={item.name} className="relative group">
-                            <a
+                            <Link
                                 href={item.href}
-                                className={`flex items-center gap-1 text-sm/6 font-semibold hover:text-sky transition-colors ${isScrolled ? 'text-navy' : 'text-white'}`}
+                                className={`flex items-center gap-1 text-sm/6 font-semibold  transition-colors ${isScrolled ? 'text-navy hover:text-orange' : 'text-white hover:text-orange-900'}`}
                                 onMouseEnter={() => setOpenSubmenu(item.name)}
                                 onMouseLeave={() => setOpenSubmenu(null)}
                             >
@@ -100,23 +101,23 @@ export default function TopMenuBar() {
                                 {item.submenu && item.submenu.length > 0 && (
                                     <ChevronDownIcon className="size-4 transition-transform group-hover:rotate-180" />
                                 )}
-                            </a>
+                            </Link>
                             {item.submenu && item.submenu.length > 0 && (
                                 <div
-                                    className={`absolute top-full left-0 mt-2 w-48 bg-cream rounded-lg shadow-lg transition-all duration-200 ${openSubmenu === item.name ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
+                                    className={`absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg transition-all duration-200 ${openSubmenu === item.name ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
                                         }`}
                                     onMouseEnter={() => setOpenSubmenu(item.name)}
                                     onMouseLeave={() => setOpenSubmenu(null)}
                                 >
                                     <div className="py-2">
                                         {item.submenu.map((subItem) => (
-                                            <a
+                                            <Link
                                                 key={subItem.name}
                                                 href={subItem.href}
-                                                className="block px-4 py-2 text-sm text-navy hover:text-orange hover:bg-sky transition-colors"
+                                                className="block px-4 py-2 text-sm text-navy hover:text-white hover:bg-orange transition-colors"
                                             >
                                                 {subItem.name}
-                                            </a>
+                                            </Link>
                                         ))}
                                     </div>
                                 </div>
@@ -125,7 +126,10 @@ export default function TopMenuBar() {
                     ))}
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="/contact" className="rounded-full bg-orange px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-orange-light transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible">
+                    <a 
+                        href="/contact" 
+                        className={`rounded-2xl bg-orange px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-orange-light transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible ${isScrolled ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+                    >
                         Afspraak maken
                     </a>
                 </div>
@@ -158,22 +162,22 @@ export default function TopMenuBar() {
                             <div className="space-y-2 py-6">
                                 {navigation.map((item) => (
                                     <div key={item.name}>
-                                        <a
+                                        <Link
                                             href={item.href}
                                             className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-cream hover:bg-navy-light transition-colors"
                                         >
                                             {item.name}
-                                        </a>
+                                        </Link>
                                         {item.submenu && item.submenu.length > 0 && (
                                             <div className="ml-4 mt-2 space-y-1">
                                                 {item.submenu.map((subItem) => (
-                                                    <a
+                                                    <Link
                                                         key={subItem.name}
                                                         href={subItem.href}
                                                         className="block rounded-lg px-3 py-2 text-sm text-cream-light hover:text-orange hover:bg-navy-light transition-colors"
                                                     >
                                                         {subItem.name}
-                                                    </a>
+                                                    </Link>
                                                 ))}
                                             </div>
                                         )}
@@ -181,12 +185,12 @@ export default function TopMenuBar() {
                                 ))}
                             </div>
                             <div className="py-6">
-                                <a
+                                <Link
                                     href="/contact"
-                                    className="-mx-3 block rounded-full px-3 py-2.5 text-base/7 font-semibold text-cream hover:bg-navy-light transition-colors"
+                                    className="-mx-3 block rounded-2xl px-3 py-2.5 text-base/7 font-semibold text-cream hover:bg-navy-light transition-colors"
                                 >
                                     Afspraak maken
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

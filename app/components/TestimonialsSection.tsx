@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { TestimonialType } from '@/app/page'
+import { MotionHeader } from '@/lib/Animations';
 
 
 export default function TestimonialsSection({testimonialsList}: {testimonialsList: TestimonialType}) {
@@ -24,8 +25,9 @@ export default function TestimonialsSection({testimonialsList}: {testimonialsLis
     ]
 
     return (
-        <section className="bg-cream py-24 sm:py-32" id="testimonials">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <section className="bg-cream py-24 sm:py-32" id="getuigenissen">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col items-center justify-center">
+                <MotionHeader delay={0.2} title="Wat zeggen onze cliënten" />
                 <div className="mx-auto grid grid-cols-1 max-w-2xl lg:mx-0 lg:max-w-none lg:grid-cols-2">
                     <AnimatePresence mode="wait">
                         {visibleTestimonials.map((testimonial, index) => (

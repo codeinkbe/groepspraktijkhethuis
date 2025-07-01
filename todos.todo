@@ -1,85 +1,91 @@
-General:
-  ☐ add favicon
+to do before first review:
+  ✔ add favicon @done(25-06-30 20:54)
   ☐ add metadata
   ☐ implement Plausible analytics
   ☐ optomize for mobile @critical
+  ☐ add btw nummer etc to footer
+  ✔ animatie toevoegen diensten @done(25-07-01 21:10)
+  ✔ animatie toevoegen veelgestelde vragen @done(25-07-01 21:10)
+  ☐ over ons foto layout fixen
+  ☐ node mailer toevoegen
+  ☐ footer links updaten 
+
 
 Tailwind:
-  ☐ add header 1 style
-  ☐ add header 2 style
-  ☐ add paragraph style
-  ☐ add button style
-  ☐ add line element style
+  ✔ add header 1 style @started(25-06-28 12:36) @done(25-06-28 15:48) @lasted(3h12m48s)
 
 Topmenubar:
-  ☐ when not scrolled the 'Afspraak button' should be invisible (just like the logo)
+  ✔ when not scrolled the 'Afspraak button' should be invisible (just like the logo) @done(25-06-28 15:51)
+  ✔ menu item icon uitlijnen @done(25-06-28 15:55)
+  ✔ check hydration failure for padding on mobile menu icon @critical @done(25-06-28 16:04)
 
 Footer:
-  ☐ remove logos at 'adres hier', 'telefoonnummer hier', 'email hier'
+  ✔ remove logos at 'adres hier', 'telefoonnummer hier', 'email hier' @done(25-06-28 15:55)
   ☐ add sitemap link
 
 Homepage:
   ☐ add metadata
   Herosection:
     ☐ Streamline the rive animation (laatste seconde fixen)
-    ☐ min-h-screen fixen
-    ☐ Contacteer ons button -> should be 'Afspraak maken
-    ☐ onze visie button arrow should point down
-    ☐ buttons linken
+    ✔ min-h-screen fixen @done(25-06-28 12:32)
+    ✔ Contacteer ons button -> should be 'Afspraak maken @started(25-06-28 12:33) @done(25-06-28 12:33) @lasted(20s)
+    ✔ onze visie button arrow should point down @started(25-06-28 12:33) @done(25-06-28 12:35) @lasted(2m55s)
+    ✔ buttons linken @started(25-06-28 12:36) @done(25-06-28 12:36) @lasted(11s)
 
   Onze Visie section:
-    ☐ header 1 style toepassen
-    ☐ paragraph style toepassen
-    ☐ line elementen toevoegen
+    ✔ header 1 style toepassen @done(25-06-28 15:56)
+    ✔ paragraph style toepassen @done(25-06-30 21:53)
 
   Onze Praktijk section:
-    ☐ kleuren fixen
-    ☐ header 1 style toepassen
-    ☐ paragraph style toepassen
-    ☐ line elementen toevoegen
-    ☐ team fotos verwijderen
+    ✔ kleuren fixen @done(25-06-28 15:56)
+    ✔ header 1 style toepassen @done(25-06-28 15:56)
+    ✔ button toevoegen met link naar diensten page @done(25-06-30 21:54)
+    ✔ sectie naam toevoegen 'pratkijk' anders werkt scroll link niet @done(25-06-30 21:54)
+    ✔ team fotos verwijderen @done(25-06-28 15:56)
 
   Testimonials section:
-    ☐ header toevoegen met header 1 style
-    ☐ fixed height fixen
-    ☐ left and right arrows fixen
+    ✔ header toevoegen met header 1 style @done(25-06-28 15:56)
+    ✘ fixed height fixen @cancelled(25-06-28 15:56)
+    ✘ left and right arrows fixen @cancelled(25-06-28 15:56)
 
   Contact section:
-    ☐ simplefy contact section with button to contact page
+    ✔ simplefy contact section with button to contact page @done(25-06-28 15:56)
 
 Diensten:
   ☐ add metadata
   Header:
-    ☐ add header 1 style
-    ☐ add paragraph style
+    ✔ add paragraph style @done(25-06-30 21:53)
+    ✔ add header 1 style @done(25-06-30 21:53)
 
   Overzicht Kinesitherapie:
-    ☐ add header 1 style
-    ☐ add paragraph style
+    ✔ add header 1 style @done(25-06-30 21:53)
+    ✔ add paragraph style @done(25-06-30 21:53)
 
   Overzicht Logopedie:
-    ☐ add header 1 style
-    ☐ add paragraph style
+    ✔ add header 1 style @done(25-06-30 21:53)
+    ✔ add paragraph style @done(25-06-30 21:53)
 
 Onze Werkwijze:
   ☐ add metadata
   Header:
-    ☐ add header 1 style
-    ☐ add paragraph style
+    ✔ add header 1 style @done(25-06-30 21:54)
+    ✔ add paragraph style @done(25-06-30 21:54)
 
   Hoe aanmelden:
     ☐ add header 1 style
     ☐ add paragraph style
+    ☐ add id to section
 
   Wachttijden:
     ☐ add header 1 style
     ☐ add paragraph style
+    ☐ add id to section
 
   Tarieven:
     ☐ add header 1 style
     ☐ add paragraph style
-  
-  Annulatiebeleid:
+    ☐ add id to section
+
     ☐ add header 1 style
     ☐ add paragraph style
 
@@ -96,6 +102,13 @@ Contact:
   Contactformulier:
     ☐ add contactformulier from tailwindui
     ☐ mail formulier to info@groepspraktijkhethuis.be
+
+  Maps:
+    ☐ add leaflet map with location of the practice using osm tileserver
+    ☐ add zoom controls
+    ☐ add marker for the practice
+    ☐ add link to google maps
+    ☐ Place for parking @low
 
 Privacy Policy:
   ☐ add privacy policy page

@@ -1,7 +1,7 @@
-import Image from 'next/image'
 import type { Metadata } from 'next'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
+import { MotionHeader } from '@/lib/Animations'
 
 export const metadata: Metadata = {
     title: 'Veelgestelde vragen | Groepspraktijk Het Huis',
@@ -66,36 +66,24 @@ const faqs = [
 ]
 
 function Header() {
-    return (
-        <div className="relative bg-cream min-h-screen">
-            <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
-                <div className="px-6 pt-10 pb-24 sm:pb-32 lg:col-span-7 lg:px-0 lg:pt-40 lg:pb-48 xl:col-span-6">
-                    <div className="mx-auto max-w-lg lg:mx-0 flex flex-col justify-center">
-                        <h1 className="mt-24 text-5xl font-semibold tracking-tight text-pretty text-navy sm:mt-10 sm:text-7xl">
-                            Specifieke vraag?
-                        </h1>
-                        <p className="mt-8 text-lg font-medium text-pretty text-navy sm:text-xl/8">
-                            Heb je een vraag dat je niet meteen kunt terugvinden op onze website? Geen zorgen, misschien vind je ze tussen onze veelgestelde vragen. Indien niet, neem dan gerust contact op dan helpen we je graag verder.
-                        </p>
-                        <div className="mt-10 flex items-center gap-x-6">
-                            <a href="#team" className="text-sm/6 font-semibold text-white">
-                                Veelgestelde vragen <span aria-hidden="true">→</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0">
-                    <Image
-                        alt=""
-                        src="/profiles/group.jpg"
-                        className="aspect-3/2 w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full"
-                        width={1000}
-                        height={1000}
-                    />
-                </div>
-            </div>
+  return (
+    <div className="relative isolate px-6 pt-14 lg:px-8">
+      <div className="mx-auto max-w-3xl py-32 sm:py-48 lg:py-56">
+        <div className="text-center">
+          <MotionHeader delay={0.2}>
+            <h1 className="text-5xl font-semibold tracking-tight text-balance text-navy sm:text-7xl">
+            Specifieke vraag?
+            </h1>
+          </MotionHeader>
+          <MotionHeader delay={0.4}>
+            <p className="mt-8 text-lg font-medium text-pretty text-navy sm:text-xl/8">
+            Heb je een vraag dat je niet meteen kunt terugvinden op onze website? Geen zorgen, misschien vind je ze tussen onze veelgestelde vragen. Indien niet, neem dan gerust contact op dan helpen we je graag verder.
+            </p>
+          </MotionHeader>
         </div>
-    )
+      </div>
+    </div>
+  )
 }
 
 
