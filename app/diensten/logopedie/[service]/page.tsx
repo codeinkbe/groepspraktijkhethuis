@@ -1,14 +1,14 @@
 import React from 'react'
-import Image from 'next/image'
+// import Image from 'next/image'
 import Link from 'next/link'
-import { CheckCircleIcon, InformationCircleIcon } from '@heroicons/react/20/solid'
-import ContactSection from '../../../components/ContactSection'
+// import { CheckCircleIcon, InformationCircleIcon } from '@heroicons/react/20/solid'
+// import ContactSection from '../../../components/ContactSection'
 import { aanbod, RichTextContent } from '@/lib/data'
 
 interface ServicePageProps {
-  params: {
+  params: Promise<{
     service: string;
-  };
+  }>;
 }
 
 // Rich text renderer component
@@ -66,8 +66,9 @@ const RichTextRenderer: React.FC<{ content: RichTextContent[] }> = ({ content })
   );
 };
 
-export default function ServicePage({ params }: ServicePageProps) {
-  const decodedService = decodeURIComponent(params.service);
+export default async function ServicePage({ params }: ServicePageProps) {
+  const { service } = await params;
+  const decodedService = decodeURIComponent(service);
   const logopedieData = aanbod.find(service => service.title === "Logopedie");
   const serviceItem = logopedieData?.items.find(item => item.title === decodedService);
 

@@ -17,7 +17,7 @@ export default function TestimonialsSection({testimonialsList}: {testimonialsLis
         }, 10000) // Change every 5 seconds
 
         return () => clearInterval(interval)
-    }, [])
+    }, [testimonialsList.length])
 
     const visibleTestimonials = [
         testimonialsList[currentIndex],

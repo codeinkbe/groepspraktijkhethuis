@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import { MotionHeader, MotionCard, MotionImage } from "@/lib/Animations";
+import { MotionHeader, MotionCard } from "@/lib/Animations";
 
 export const metadata: Metadata = {
   title: "Over Ons | Groepspraktijk Het Huis",

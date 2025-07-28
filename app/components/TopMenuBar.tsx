@@ -41,24 +41,20 @@ export default function TopMenuBar() {
     const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
     const pathname = usePathname();
 
-    const handleScroll = () => {
-        const scrollPosition = window.scrollY;
-        if (pathname === '/') {
-            if (scrollPosition > 100) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
-        } else {
-            setIsScrolled(true);
-        }
-    };
-
-    const closeMobileMenu = () => {
-        setMobileMenuOpen(false);
-    };
-
     useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            if (pathname === '/') {
+                if (scrollPosition > 100) {
+                    setIsScrolled(true);
+                } else {
+                    setIsScrolled(false);
+                }
+            } else {
+                setIsScrolled(true);
+            }
+        };
+
         // Set initial state based on current page
         if (pathname !== '/') {
             setIsScrolled(true);
@@ -66,6 +62,10 @@ export default function TopMenuBar() {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, [pathname]);
+
+    const closeMobileMenu = () => {
+        setMobileMenuOpen(false);
+    };
 
     return (
         <header className="fixed inset-x-0 top-0 z-50">
@@ -142,7 +142,7 @@ export default function TopMenuBar() {
                 <div className="fixed inset-0 z-50" />
                 <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-navy p-6 sm:max-w-sm sm:ring-1 sm:ring-cream/20">
                     <div className="flex items-center justify-between">
-                        <a href="/" className="-m-1.5 p-1.5">
+                        <Link href="/" className="-m-1.5 p-1.5">
                             <span className="sr-only">Groepspraktijk Het Huis</span>
                             <Image
                                 alt=""
@@ -151,7 +151,7 @@ export default function TopMenuBar() {
                                 height={32}
                                 className="h-8 w-auto"
                             />
-                        </a>
+                        </Link>
                         <button
                             type="button"
                             onClick={() => setMobileMenuOpen(false)}

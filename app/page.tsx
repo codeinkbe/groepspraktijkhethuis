@@ -1,4 +1,4 @@
-import TestimonialsSection from "@/app/components/TestimonialsSection";
+// import TestimonialsSection from "@/app/components/TestimonialsSection";
 import { MotionHeader, MotionCard } from "@/lib/Animations";
 import Image from "next/image";
 import { Metadata } from "next";
@@ -99,26 +99,24 @@ const posts = [
   }
 ]
 
-const testimonials = [
+export type TestimonialType = [
   {
-    name: "Jolien",
-    text: "Ik heb geleerd dat ik meer kan dan ik dacht. Ik heb geleerd dat ik meer kan dan ik dacht. Ik heb geleerd dat ik meer kan dan ik dacht.",
+    name: string;
+    text: string;
   },
   {
-    name: "Jasper",
-    text: "Dankzij deze praktijk heb ik mijn zelfvertrouwen terug gekregen. Ik heb geleerd dat ik meer kan dan ik dacht. Ik heb geleerd dat ik meer kan dan ik dacht. Ik heb geleerd dat ik meer kan dan ik dacht.",
+    name: string;
+    text: string;
   },
   {
-    name: "Joris",
-    text: "Ik heb bij Het Huis geleerd dat ik meer kan dan ik dacht. Ik heb geleerd dat ik meer kan dan ik dacht. Ik heb geleerd dat ik meer kan dan ik dacht.",
+    name: string;
+    text: string;
   },
   {
-    name: "Natalie",
-    text: "Het is een geweldige praktijk met een geweldige team. Ik heb geleerd dat ik meer kan dan ik dacht. Ik heb geleerd dat ik meer kan dan ik dacht. Ik heb geleerd dat ik meer kan dan ik dacht.",
-  },
+    name: string;
+    text: string;
+  }
 ]
-
-export type TestimonialType = typeof testimonials
 
 // COMPONENTS
 // ------------------------------------------------------------

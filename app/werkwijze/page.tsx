@@ -6,7 +6,6 @@ import {
   MotionHeader,
   MotionSection,
   MotionImage,
-  MotionFeature,
 } from "@/lib/Animations";
 
 export const metadata: Metadata = {
