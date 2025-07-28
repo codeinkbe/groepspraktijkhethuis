@@ -1,13 +1,18 @@
-import React from 'react'
-import Image from 'next/image'
-import type { Metadata } from 'next'
-import ContactSection from '../components/ContactSection'
-import { MotionHeader, MotionSection, MotionImage, MotionFeature } from '@/lib/Animations'
+import React from "react";
+import Image from "next/image";
+import type { Metadata } from "next";
+import ContactSection from "../components/ContactSection";
+import {
+  MotionHeader,
+  MotionSection,
+  MotionImage,
+  MotionFeature,
+} from "@/lib/Animations";
 
 export const metadata: Metadata = {
-  title: 'Werkwijze',
-  description: 'Werkwijze van Groepspraktijk Het Huis',
-}
+  title: "Werkwijze",
+  description: "Werkwijze van Groepspraktijk Het Huis",
+};
 
 // const stappen = [
 //   { id: 1 as const, name: 'Aanmelden', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.' },
@@ -27,13 +32,15 @@ function Header() {
           </MotionHeader>
           <MotionHeader delay={0.4}>
             <p className="mt-8 text-lg font-medium text-pretty text-navy sm:text-xl/8">
-              We vinden het belangrijk dat je precies weet wat je kan verwachten als je bij ons een traject start. Van aanmelding tot tarieven, hier vind je alle praktische informatie op een rijtje.
+              We vinden het belangrijk dat je precies weet wat je kan verwachten
+              als je bij ons een traject start. Van aanmelding tot tarieven,
+              hier vind je alle praktische informatie op een rijtje.
             </p>
           </MotionHeader>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function Aanmelden() {
@@ -41,41 +48,44 @@ function Aanmelden() {
     <div className="overflow-hidden  py-24 sm:py-32 bg-sky" id="hoe-aanmelden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-          <MotionSection direction="left" className="lg:ml-auto lg:pt-4 lg:pl-4">
+          <MotionSection
+            direction="left"
+            className="lg:ml-auto lg:pt-4 lg:pl-4"
+          >
             <div className="lg:max-w-lg">
-                <h2 className="text-base/7 font-semibold text-orange">Werkwijze</h2>
+              <h2 className="text-base/7 font-semibold text-orange">
+                Werkwijze
+              </h2>
               <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
-                Hoe meld je je aan?
+                Hoe aanmelden
               </p>
-              <p className="mt-6 text-lg/8 text-gray-600">
-                Een afspraak maken is eenvoudig. Volg deze stappen:
-              </p>
-              <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
-                <MotionFeature index={0} className="relative">
-                  <dt className="inline font-semibold text-gray-900">
-                    Neem contact op:
-                  </dt>{' '}
-                  <dd className="inline">Bel ons of stuur een e-mail via het contactformulier met je naam, geboortedatum en een korte beschrijving van je vraag of klacht.</dd>
-                </MotionFeature>
-                <MotionFeature index={1} className="relative">
-                  <dt className="inline font-semibold text-gray-900">
-                    Intakegesprek:
-                  </dt>{' '}
-                  <dd className="inline">We plannen een eerste afspraak in. Tijdens dit gesprek luisteren we naar je verhaal, voeren we een eerste onderzoek uit en bespreken we de mogelijkheden.</dd>
-                </MotionFeature>
-                <MotionFeature index={2} className="relative">
-                  <dt className="inline font-semibold text-gray-900">
-                    Behandelplan:
-                  </dt>{' '}
-                  <dd className="inline">Op basis van de intake stellen we een persoonlijk behandelplan op met duidelijke doelen.</dd>
-                </MotionFeature>
-                <MotionFeature index={3} className="relative">
-                  <dt className="inline font-semibold text-gray-900">
-                    Start van de therapie:
-                  </dt>{' '}
-                  <dd className="inline">We gaan samen aan de slag!</dd>
-                </MotionFeature>
-              </dl>
+              <div className="mt-6 text-lg/8 text-gray-600 space-y-6">
+                <p>
+                  Het aanmelden voor logopedische of kinesitherapeutische
+                  begeleiding verloopt steeds via het aanmeldformulier op onze
+                  website. We ontvangen jullie graag voor een intakegesprek met
+                  de ouder(s) van het kind. Tijdens dit gesprek brengen we de
+                  zorgvragen in kaart en overlopen we enkele praktische zaken,
+                  zoals het verloop van het onderzoek en de mogelijkheden tot
+                  terugbetaling.
+                </p>
+                <p>
+                  Daarna plannen we een geschikt moment voor het onderzoek in.
+                  De duur hiervan hangt af van de aard van de moeilijkheden die
+                  je kind ondervindt en de onderzoeken die reeds zijn afgenomen.
+                  Het onderzoek is essentieel om als therapeut een duidelijk
+                  beeld te krijgen van de vaardigheden van het kind en vormt
+                  tevens de basis voor een eventuele terugbetaling. Afhankelijk
+                  van de problematiek en uw mutualiteit kan een (gedeeltelijke)
+                  terugbetaling voorzien worden.
+                </p>
+                <p>
+                  Tot slot leggen we een afspraak vast om de
+                  onderzoeksresultaten en de terugbetalingsmogelijkheden te
+                  bespreken. Op dat moment bekijken we ook of opstarten van
+                  therapie al dan niet aangewezen is.
+                </p>
+              </div>
             </div>
           </MotionSection>
           <MotionImage className="flex items-start justify-end lg:order-first">
@@ -84,13 +94,13 @@ function Aanmelden() {
               src="/images/werkwijze.jpg"
               width={2432}
               height={1442}
-              className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 object-cover max-h-92"
+              className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 object-cover h-full"
             />
           </MotionImage>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function Wachten() {
@@ -98,14 +108,21 @@ function Wachten() {
     <div className="overflow-hidden bg-cream py-24 sm:py-32" id="wachttijd">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-          <MotionSection direction="right" className="lg:ml-auto lg:pt-4 lg:pl-4 lg:order-first">
+          <MotionSection
+            direction="right"
+            className="lg:ml-auto lg:pt-4 lg:pl-4 lg:order-first"
+          >
             <div className="lg:max-w-lg">
-              <h2 className="text-base/7 font-semibold text-orange">Werkwijze</h2>
+              <h2 className="text-base/7 font-semibold text-orange">
+                Werkwijze
+              </h2>
               <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
-                Wachtlijst informatie
+                Wachttijd 
               </p>
               <p className="mt-6 text-lg/8 text-gray-600">
-                We streven ernaar om iedereen zo snel mogelijk te helpen. Afhankelijk van de drukte en de flexibiliteit in je agenda, kan het zijn dat er een korte wachttijd is. Na je aanmelding geven we je een indicatie van de wachttijd en nemen we contact op zodra er een plek vrijkomt.
+                Op dit moment is er geen wachtlijst. Na jullie aanmelding via de
+                website nemen we snel contact op om te bespreken hoe we jullie
+                het best kunnen ondersteunen.
               </p>
             </div>
           </MotionSection>
@@ -121,38 +138,94 @@ function Wachten() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-function Afspraak() {
+function Tarieven() {
   return (
-    <div className="overflow-hidden bg-white py-24 sm:py-32" id="afspraak">
+    <div className="overflow-hidden py-24 sm:py-32 bg-white" id="tarieven">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-          <MotionSection direction="left" className="lg:ml-auto lg:pt-4 lg:pl-4">
+          <MotionSection
+            direction="left"
+            className="lg:ml-auto lg:pt-4 lg:pl-4"
+          >
             <div className="lg:max-w-lg">
-              <h2 className="text-base/7 font-semibold text-orange">Werkwijze</h2>
+              <h2 className="text-base/7 font-semibold text-orange">
+                Werkwijze
+              </h2>
               <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
-                Tarieven en terugbetaling
+                Tarieven
               </p>
-              <p className="mt-6 text-lg/8 text-gray-600">
-                Wij hanteren de officiële tarieven die door het RIZIV zijn vastgelegd. Of je recht hebt op een volledige of gedeeltelijke terugbetaling hangt af van je ziekenfonds en de aard van je klacht. Voor logopedie is vaak een voorschrift van een arts vereist. We informeren je hierover uitgebreid tijdens het intakegesprek en helpen je met de nodige documenten voor je mutualiteit.
-              </p>
+              <div className="mt-6 text-lg/8 text-gray-600 space-y-8">
+                <div>
+                  <h3 className="text-xl font-semibold text-navy mb-4">Logopedie</h3>
+                  <p className="text-sm text-gray-500 mb-4">Alle logopedisten zijn geconventioneerd.</p>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex justify-between">
+                      <span>Onderzoek (per 30 minuten):</span>
+                      <span className="font-semibold">44,18 euro</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>Therapie in de praktijk (per 30 minuten):</span>
+                      <span className="font-semibold">37,35 euro</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>Therapie op school (per 30 minuten):</span>
+                      <span className="font-semibold">40,35 euro</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>Terugbetaling via RIZIV:</span>
+                      <span className="font-semibold">31,85 euro</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>Terugbetaling via aanvullende verzekering:</span>
+                      <span className="font-semibold">Na te vragen bij uw mutualiteit</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-navy mb-4">Kinesitherapie Sofie</h3>
+                  <p className="text-sm text-gray-500 mb-4">Alle kinesitherapeuten zijn gedeconventioneerd.</p>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex justify-between">
+                      <span>Onderzoek:</span>
+                      <span className="font-semibold">???</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>Therapie in de praktijk (per 30min):</span>
+                      <span className="font-semibold">37 euro</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>Therapie op school (per 30min):</span>
+                      <span className="font-semibold">41 euro</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>Terugbetaling in de praktijk (per 30min):</span>
+                      <span className="font-semibold">18,41 euro</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>Terugbetaling op school (per 30min):</span>
+                      <span className="font-semibold">20,73 euro</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </MotionSection>
           <MotionImage className="flex items-start justify-end lg:order-first">
             <Image
-              alt="Product screenshot"
-              src="/images/afspraak.jpg"
+              alt="Tarieven"
+              src="/images/aanmelden.jpg"
               width={2432}
               height={1442}
-              className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 object-cover max-h-92"
+              className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 object-cover h-full"
             />
           </MotionImage>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 // function Annulatiebeleid() {
@@ -183,10 +256,10 @@ export default function WerkwijzePage() {
       <Header />
       <Aanmelden />
       <Wachten />
-      <Afspraak />
+      <Tarieven />
       {/* <Annulatiebeleid /> */}
       <ContactSection />
       {/* <Faq /> */}
     </>
-  )
+  );
 }

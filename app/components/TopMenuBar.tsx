@@ -12,11 +12,11 @@ const navigation = [
         name: 'Home', href: '/#hero', submenu: [
             { name: 'Visie', href: '/#visie' },
             { name: 'Praktijk', href: '/#praktijk' },
-            { name: 'Getuigenissen', href: '/#getuigenissen' },
+            // { name: 'Getuigenissen', href: '/#getuigenissen' },
         ]
     },
     {
-        name: 'Diensten', href: '/diensten', submenu: [
+        name: 'Aanbod', href: '/diensten', submenu: [
             { name: 'Logopedie', href: '/diensten#logopedie' },
             { name: 'Kinesitherapie', href: '/diensten#kinesitherapie' },
         ]
@@ -32,7 +32,7 @@ const navigation = [
             { name: 'Annulatiebeleid', href: '/werkwijze#annulatiebeleid' },
         ]
     },
-    { name: 'Veelgestelde vragen', href: '/veelgestelde-vragen', submenu: [] },
+    // { name: 'Veelgestelde vragen', href: '/veelgestelde-vragen', submenu: [] },
 ]
 
 export default function TopMenuBar() {
@@ -52,6 +52,10 @@ export default function TopMenuBar() {
         } else {
             setIsScrolled(true);
         }
+    };
+
+    const closeMobileMenu = () => {
+        setMobileMenuOpen(false);
     };
 
     useEffect(() => {
@@ -138,7 +142,7 @@ export default function TopMenuBar() {
                 <div className="fixed inset-0 z-50" />
                 <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-navy p-6 sm:max-w-sm sm:ring-1 sm:ring-cream/20">
                     <div className="flex items-center justify-between">
-                        <a href="#" className="-m-1.5 p-1.5">
+                        <a href="/" className="-m-1.5 p-1.5">
                             <span className="sr-only">Groepspraktijk Het Huis</span>
                             <Image
                                 alt=""
@@ -165,6 +169,7 @@ export default function TopMenuBar() {
                                         <Link
                                             href={item.href}
                                             className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-cream hover:bg-navy-light transition-colors"
+                                            onClick={closeMobileMenu}
                                         >
                                             {item.name}
                                         </Link>
@@ -175,6 +180,7 @@ export default function TopMenuBar() {
                                                         key={subItem.name}
                                                         href={subItem.href}
                                                         className="block rounded-lg px-3 py-2 text-sm text-cream-light hover:text-orange hover:bg-navy-light transition-colors"
+                                                        onClick={closeMobileMenu}
                                                     >
                                                         {subItem.name}
                                                     </Link>
@@ -188,6 +194,7 @@ export default function TopMenuBar() {
                                 <Link
                                     href="/contact"
                                     className="-mx-3 block rounded-2xl px-3 py-2.5 text-base/7 font-semibold text-cream hover:bg-navy-light transition-colors"
+                                    onClick={closeMobileMenu}
                                 >
                                     Afspraak maken
                                 </Link>

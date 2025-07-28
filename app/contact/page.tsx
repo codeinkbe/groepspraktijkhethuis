@@ -80,7 +80,7 @@ export default function ContactPage() {
             </h2>
             <p className="mt-6 text-lg/8 text-gray-600">
               Heb je een vraag of wil je je aanmelden? Vul het onderstaande formulier in en we nemen zo snel mogelijk
-              contact met je op. Berichten worden verstuurd naar{' '}
+              contact met je op via e-mail. Berichten worden verstuurd naar{' '}
               <a href="mailto:info@groepspraktijkhethuis.be" className="text-orange">
                 info@groepspraktijkhethuis.be
               </a>
@@ -92,20 +92,11 @@ export default function ContactPage() {
                   <BuildingOffice2Icon aria-hidden="true" className="h-7 w-6 text-gray-400" />
                 </dt>
                 <dd>
-                  Straatnaam 123
+                  Groepspraktijk Het Huis
                   <br />
-                  2000 Antwerpen, België
-                </dd>
-              </div>
-              <div className="flex gap-x-4">
-                <dt className="flex-none">
-                  <span className="sr-only">Telephone</span>
-                  <PhoneIcon aria-hidden="true" className="h-7 w-6 text-gray-400" />
-                </dt>
-                <dd>
-                  <a href="tel:+1 (555) 234-5678" className="hover:text-gray-900">
-                    +32 475 234 567
-                  </a>
+                  Koornbloemstraat 37A
+                  <br />
+                  2610 Wilrijk
                 </dd>
               </div>
               <div className="flex gap-x-4">

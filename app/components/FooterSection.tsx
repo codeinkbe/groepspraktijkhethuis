@@ -8,7 +8,7 @@ const navigation = {
     { name: 'Diensten', href: '/diensten' },
     { name: 'Over ons', href: '/over-ons' },
     { name: 'Werkwijze', href: '/werkwijze' },
-    { name: 'Veelgestelde vragen', href: '/veelgestelde-vragen' },
+    // { name: 'Veelgestelde vragen', href: '/veelgestelde-vragen' },
     { name: 'Contact', href: '/contact' },
   ],
   legal: [
@@ -59,8 +59,8 @@ export default function FooterSection() {
               Multidisciplinaire praktijk voor kinderen en volwassenen, gespecialiseerd in logopedie, kinesitherapie en persoonlijke begeleiding op maat.
             </p>
             <div className="space-y-2 text-cream-light">
-              <p>Adres</p>
-              <p>+32 475 00 00 00</p>
+              <p>Koornbloemstraat 37A</p>
+              <p>2610 Wilrijk</p>
               <p>info@groepspraktijkhethuis.be</p>
             </div>
           </div>

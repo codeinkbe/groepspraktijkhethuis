@@ -3,6 +3,7 @@ import Image from 'next/image'
 import ContactSection from '../components/ContactSection'
 import Link from 'next/link'
 import { MotionHeader, MotionSection, MotionImage } from '@/lib/Animations'
+import { aanbod } from '@/lib/data'
 
 function Header() {
   return (
@@ -25,7 +26,18 @@ function Header() {
   )
 }
 
+function SubItem(item: {title: string}) {
+  return (
+    <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/20 hover:bg-white/70 group transition-all duration-300 cursor-pointer h-30 flex flex-col justify-center">
+      <h3 className="font-semibold text-navy text-lg mb-2 text-center break-words group-hover:text-orange">{item.title}</h3>
+      {/* <p className="text-navy break-words">{item.description}</p> */}
+    </div>
+  )
+}
+
 function Logopedie() {
+  const logopedieData = aanbod.find(service => service.title === "Logopedie");
+
   return (
     <div className="overflow-hidden bg-sky py-24 sm:py-32" id="logopedie">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -34,52 +46,27 @@ function Logopedie() {
             <div className="lg:max-w-lg">
                 <h2 className="text-base/7 font-semibold text-orange">Diensten</h2>
               <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-navy sm:text-5xl">
-                Logopedie: Meer dan alleen praten
+                {logopedieData?.title}: Meer dan alleen praten
               </p>
               <p className="mt-6 text-lg/8 text-navy">
-                Logopedie helpt je bij moeilijkheden met communicatie in de breedste zin van het woord. Wij kunnen je begeleiden bij:
+                {logopedieData?.description}
               </p>
-              <dl className="mt-10 max-w-xl space-y-4 text-base/7 text-navy lg:max-w-none">
-                <div className="relative pl-0">
-                  <dt className="inline font-semibold text-navy">
-                    Articulatie:
-                  </dt>{' '}
-                  <dd className="inline">Duidelijk en verstaanbaar leren spreken.</dd>
-                </div>
-                <div className="relative pl-0">
-                  <dt className="inline font-semibold text-navy">
-                    Taal:
-                  </dt>{' '}
-                  <dd className="inline">Hulp bij taalontwikkeling, woordenschat of zinsbouw.</dd>
-                </div>
-                <div className="relative pl-0">
-                  <dt className="inline font-semibold text-navy">
-                    Stem:
-                  </dt>{' '}
-                  <dd className="inline">Begeleiding bij heesheid, stemverlies of verkeerd stemgebruik.</dd>
-                </div>
-                <div className="relative pl-0">
-                  <dt className="inline font-semibold text-navy">
-                    Vloeiendheid:
-                  </dt>{' '}
-                  <dd className="inline">Therapie voor stotteren of broddelen.</dd>
-                </div>
-                <div className="relative pl-0">
-                  <dt className="inline font-semibold text-navy">
-                    Mondgewoonten:
-                  </dt>{' '}
-                  <dd className="inline">Hulp bij afwijkend slikken, duimzuigen of mondademen (vaak in samenwerking met een orthodontist).</dd>
-                </div>
-              </dl>
-              <p className="mt-8 text-lg/8 text-navy font-medium">
-              <Link href="/contact" className="underline">Neem contact op</Link>, Neem contact op voor een begeleiding op maat.
-              </p>
+              <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2">
+                {logopedieData?.items.map((item, index) => (
+                  <Link href={`/diensten/logopedie/${item.title}`} key={index}>
+                    <SubItem title={item.title} />
+                  </Link>
+                ))}
+              </div>
+              {/* <p className="mt-8 text-lg/8 text-navy font-medium">
+                <Link href="/contact" className="underline">Neem contact op</Link> voor een begeleiding op maat.
+              </p> */}
             </div>
           </MotionSection>
           <MotionImage>
             <Image
               alt="Logopedie behandeling"
-              src="/images/logopedie.jpg"
+              src={logopedieData?.image || "/images/logopedie.jpg"}
               width={1000}
               height={1000}
               className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-white/10 sm:w-228 md:-ml-4 lg:-ml-0"
@@ -92,6 +79,8 @@ function Logopedie() {
 }
 
 function Kinesitherapie() {
+  const kinesitherapieData = aanbod.find(service => service.title === "Kinesitherapie");
+
   return (
     <div className="overflow-hidden bg-cream py-24 sm:py-32" id="kinesitherapie">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -100,58 +89,27 @@ function Kinesitherapie() {
             <div className="lg:max-w-lg">
               <h2 className="text-base/7 font-semibold text-orange">Diensten</h2>
               <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-navy sm:text-5xl">
-                Kinesitherapie: Jouw lichaam in beweging
+                {kinesitherapieData?.title}: Jouw lichaam in beweging
               </p>
               <p className="mt-6 text-lg/8 text-navy">
-                Kinesitherapie richt zich op het herstellen en verbeteren van je lichamelijk functioneren. Je kan bij ons terecht voor:
+                {kinesitherapieData?.description}
               </p>
-              <dl className="mt-10 max-w-xl space-y-4 text-base/7 text-navy lg:max-w-none">
-                <div className="relative pl-0">
-                  <dt className="inline font-semibold text-navy">
-                    Nek-, schouder- en rugklachten:
-                  </dt>{' '}
-                  <dd className="inline">Aanpak van pijn en stijfheid door houding, stress of overbelasting.</dd>
-                </div>
-                <div className="relative pl-0">
-                  <dt className="inline font-semibold text-navy">
-                    Sportblessures:
-                  </dt>{' '}
-                  <dd className="inline">Revalidatie na een verstuiking, spierscheur of andere sportgerelateerde kwetsuren.</dd>
-                </div>
-                <div className="relative pl-0">
-                  <dt className="inline font-semibold text-navy">
-                    Manuele therapie:
-                  </dt>{' '}
-                  <dd className="inline">Gespecialiseerde technieken om gewrichten en spieren los te maken.</dd>
-                </div>
-                <div className="relative pl-0">
-                  <dt className="inline font-semibold text-navy">
-                    Ademhalingstherapie:
-                  </dt>{' '}
-                  <dd className="inline">Hulp bij hyperventilatie of andere ademhalingsproblemen.</dd>
-                </div>
-                <div className="relative pl-0">
-                  <dt className="inline font-semibold text-navy">
-                    Bekkenbodemtherapie:
-                  </dt>{' '}
-                  <dd className="inline">Begeleiding bij klachten voor, tijdens en na de zwangerschap.</dd>
-                </div>
-                <div className="relative pl-0">
-                  <dt className="inline font-semibold text-navy">
-                    Relaxatietherapie:
-                  </dt>{' '}
-                  <dd className="inline">Technieken om spanning en stress te verminderen.</dd>
-                </div>
-              </dl>
-              <p className="mt-8 text-lg/8 text-navy font-medium">
+              <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2">
+                {kinesitherapieData?.items.map((item, index) => (
+                  <Link href={`/diensten/kinesitherapie/${item.title}`} key={index}>
+                    <SubItem title={item.title} />
+                  </Link>
+                ))}
+              </div>
+              {/* <p className="mt-8 text-lg/8 text-navy font-medium">
                 <Link href="/contact" className="underline">Neem contact op</Link>, en we stellen een actief en persoonlijk behandelplan voor je op.
-              </p>
+              </p> */}
             </div>
           </MotionSection>
           <MotionImage className="flex items-start justify-end lg:order-first">
             <Image
               alt="Kinesitherapie behandeling"
-              src="/images/kinesitherapie.jpg"
+              src={kinesitherapieData?.image || "/images/kinesitherapie.jpg"}
               width={1000}
               height={1000}
               className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228"

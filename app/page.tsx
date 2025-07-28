@@ -76,7 +76,7 @@ const posts = [
     title: 'kinesitherapie',
     href: '#',
     description:
-      'Onze physiotherapeut is gespecialiseerd in het behandelen van aandoeningen van de spieren, gewrichten en zenuwen. Hij kan je helpen met pijn, vermoeidheid, bewegingsbeperkingen en meer.',
+      'Een kinesitherapeut helpt kinderen met (psycho)motorische, neurologische, respiratoire of orthopedische moeilijkheden.',
     imageUrl:
       '/images/kinesitherapie.jpg',
     date: 'Mar 16, 2020',
@@ -89,7 +89,7 @@ const posts = [
     title: 'Logopedie',
     href: '#',
     description:
-      'Onze logopedist is gespecialiseerd in het behandelen van aandoeningen van de spraak, taal en spraakverstaan. Hij kan je helpen met spraakproblemen, taalbeperkingen en meer.',
+      'Een logopedist helpt kinderen die het moeilijk hebben met communicatie, articulatie, taal- of leermoeilijkheden',
     imageUrl:
       '/images/logopedie.jpg',
     date: 'Mar 16, 2020',
@@ -126,7 +126,7 @@ export type TestimonialType = typeof testimonials
 
 function VisieSection() {
   const title = "Onze visie"
-  const description = "Bij Het Huis geloven we in een warme, persoonlijke aanpak waar elke cliënt zich gezien en gehoord voelt. We streven naar duurzame groei en herstel, met aandacht voor het unieke verhaar achter elke hulpvraag. Vanuit een multidisciplinaire samenwerking begeleiden we kinderen en volwassenen op een respectvolle en betrokken manier, met ruimte voor kwetsbaarheid, vertrouwen en verandering."
+  const description = "Welkom bij het Huis! Een multidisciplinaire praktijk die therapie op maat biedt voor kinderen tussen 0 en 18 jaar.\nHet Huis is een warme en veilige omgeving voor onze patiënten en hun omgeving, Voor ons staan vertrouwen,\ngroei, positiviteit en betrokkenheid centraal."
   return (
     <div className="bg-cream px-6 py-24 sm:py-32 lg:px-8 flex items-center justify-center" id="visie">
       <div className="mx-auto max-w-2xl text-center">
@@ -143,7 +143,7 @@ function VisieSection() {
 
 function ShortOverviewSection() {
   const title = "Onze praktijk"
-  const description = "In onze praktijk werken we met een multidisciplinaire benadering, waarbij we samenwerken met andere professionals om de beste oplossing te bieden voor elke cliënt."
+  const description = "Onze praktijk brengt verschillende zorgverleners samen onder één dak, zodat we zorg op een geïntegreerde manier kunnen aanbieden. Momenteel bestaat ons team uit drie therapeuten. We richten ons op logopedische en kinesitherapeutische begeleiding bij kinderen tussen 0 en 18 jaar."
   return (
     <div className="bg-sky py-24 sm:py-32" id="praktijk">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -177,7 +177,8 @@ function ShortOverviewSection() {
                     </h3>
                     <p className="mt-5 line-clamp-3 text-navy-light">{post.description}</p>
                   </div>
-                  <Link href={post.link} className="mt-5 text-navy-light hover:text-navy transition-colors font-bold underline">
+
+                  <Link href={post.link} className={`rounded-2xl bg-orange px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-orange-light transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible mt-5`}>
                     Meer informatie
                   </Link>
                 </div>
@@ -200,7 +201,7 @@ export default function Home() {
       <HeroSection />
       <VisieSection />
       <ShortOverviewSection />
-      <TestimonialsSection testimonialsList={testimonials} />
+      {/* <TestimonialsSection testimonialsList={testimonials} /> */}
       <ContactSection />
     </>
   );
