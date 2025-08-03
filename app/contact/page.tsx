@@ -123,7 +123,14 @@ export default function ContactPage() {
             )}
             {submitStatus === 'error' && (
               <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md">
-                <p className="text-red-800">Er is een fout opgetreden. Probeer het later opnieuw.</p>
+                <p className="text-red-800">
+                  Er is een fout opgetreden bij het versturen van je bericht. 
+                  Controleer je internetverbinding en probeer het opnieuw. 
+                  Als het probleem aanhoudt, neem dan direct contact op via{' '}
+                  <a href="mailto:info@groepspraktijkhethuis.be" className="underline">
+                    info@groepspraktijkhethuis.be
+                  </a>
+                </p>
               </div>
             )}
             
