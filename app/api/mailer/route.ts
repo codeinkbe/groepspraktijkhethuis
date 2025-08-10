@@ -5,10 +5,15 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
   try {
+    // Log the request for debugging
+    console.log('Mailer API called at:', new Date().toISOString());
+    console.log('Environment check - RESEND_API_KEY exists:', !!process.env.RESEND_API_KEY);
+    
     const { firstName, lastName, email, phoneNumber, message } = await request.json();
 
     // Validate required fields
     if (!firstName || !lastName || !email || !phoneNumber || !message) {
+      console.log('Validation failed - missing fields');
       return NextResponse.json(
         { error: 'Alle velden zijn verplicht' },
         { status: 400 }
@@ -18,11 +23,23 @@ export async function POST(request: NextRequest) {
     // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
+      console.log('Validation failed - invalid email format');
       return NextResponse.json(
         { error: 'Ongeldig e-mailadres' },
         { status: 400 }
       );
     }
+
+    // Check if Resend is properly configured
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY is missing');
+      return NextResponse.json(
+        { error: 'Email service not configured' },
+        { status: 500 }
+      );
+    }
+
+    console.log('Attempting to send email via Resend...');
 
     // Send email using Resend
     const { data, error } = await resend.emails.send({
