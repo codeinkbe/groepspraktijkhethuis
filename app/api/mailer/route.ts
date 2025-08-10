@@ -61,7 +61,7 @@ export async function POST(request: NextRequest) {
         <p><strong>E-mail:</strong> ${email}</p>
         <p><strong>Telefoon:</strong> ${phoneNumber}</p>
         <p><strong>Bericht:</strong></p>
-        <p>${message}</p>
+        <p>${message.replace(/\n/g, '<br>')}</p>
       `,
     }
 
@@ -81,7 +81,11 @@ export async function POST(request: NextRequest) {
     }
     
     return NextResponse.json(
-      { success: false, message: 'Failed to send email' },
+      { 
+        success: false, 
+        message: 'Failed to send email',
+        error: process.env.NODE_ENV === 'development' ? error.message : 'Internal server error'
+      },
       { status: 500 }
     )
   }
