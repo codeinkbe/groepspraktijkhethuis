@@ -28,8 +28,8 @@ const navigation = [
         name: 'Werkwijze', href: '/werkwijze', submenu: [
             { name: 'Hoe aanmelden', href: '/werkwijze#hoe-aanmelden' },
             { name: 'Wachttijd', href: '/werkwijze#wachttijd' },
-            { name: 'Tarieven', href: '/werkwijze#afspraak' },
-            { name: 'Annulatiebeleid', href: '/werkwijze#annulatiebeleid' },
+            { name: 'Tarieven', href: '/werkwijze#tarieven' },
+            // { name: 'Annulatiebeleid', href: '/werkwijze#annulatiebeleid' },
         ]
     },
     // { name: 'Veelgestelde vragen', href: '/veelgestelde-vragen', submenu: [] },

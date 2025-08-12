@@ -56,10 +56,10 @@ export default function FooterSection() {
           <div className="lg:col-span-2">
             <h3 className="text-lg font-semibold text-cream mb-4">Groepspraktijk Het Huis</h3>
             <p className="text-cream-light mb-4">
-              Multidisciplinaire praktijk voor kinderen en volwassenen, gespecialiseerd in logopedie, kinesitherapie en persoonlijke begeleiding op maat.
+              Multidisciplinaire praktijk voor kinderen, gespecialiseerd in logopedie, kinesitherapie en persoonlijke begeleiding op maat.
             </p>
             <div className="space-y-2 text-cream-light">
-              <p>Koornbloemstraat 37A</p>
+              <p>Koornbloemstraat 73A</p>
               <p>2610 Wilrijk</p>
               <p>info@groepspraktijkhethuis.be</p>
             </div>

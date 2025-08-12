@@ -94,7 +94,7 @@ export default function ContactPage() {
                 <dd>
                   Groepspraktijk Het Huis
                   <br />
-                  Koornbloemstraat 37A
+                  Koornbloemstraat 73A
                   <br />
                   2610 Wilrijk
                 </dd>

@@ -104,8 +104,8 @@ export const aanbod: Aanbod[] = [
         ]
       },
       {
-        title: "Afwijkende mondgewoonte",
-        description: ["Mondademhaling, duim- of vingerzuigen, speenzuigen, nagelbijten, foutieve tong- of lipgewoonten tijdens rust, slikken of spreken… het zijn allemaal vormen van afwijkend mondgedrag."],
+        title: "Afwijkende mondgewoonten",
+        description: ["Mondademhaling, duim- of vingerzuigen, speenzuigen, nagelbijten, foutieve tong- of lipgewoonten tijdens rust, slikken of spreken, het zijn allemaal vormen van afwijkend mondgedrag."],
         details: [
           {
             type: 'paragraph',

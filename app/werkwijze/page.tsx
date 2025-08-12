@@ -184,27 +184,27 @@ function Tarieven() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-navy mb-4">Kinesitherapie Sofie</h3>
+                  <h3 className="text-xl font-semibold text-navy mb-4">Kinesitherapie</h3>
                   <p className="text-sm text-gray-500 mb-4">Alle kinesitherapeuten zijn gedeconventioneerd.</p>
                   <ul className="space-y-2 text-sm">
                     <li className="flex justify-between">
-                      <span>Onderzoek:</span>
-                      <span className="font-semibold">???</span>
-                    </li>
-                    <li className="flex justify-between">
-                      <span>Therapie in de praktijk (per 30min):</span>
+                      <span>Onderzoek (per 30 minuten):</span>
                       <span className="font-semibold">37 euro</span>
                     </li>
                     <li className="flex justify-between">
-                      <span>Therapie op school (per 30min):</span>
+                      <span>Therapie in de praktijk (per 30 minuten):</span>
+                      <span className="font-semibold">37 euro</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>Therapie op school (per 30 minuten):</span>
                       <span className="font-semibold">41 euro</span>
                     </li>
                     <li className="flex justify-between">
-                      <span>Terugbetaling in de praktijk (per 30min):</span>
+                      <span>Terugbetaling in de praktijk (per 30 minuten):</span>
                       <span className="font-semibold">18,41 euro</span>
                     </li>
                     <li className="flex justify-between">
-                      <span>Terugbetaling op school (per 30min):</span>
+                      <span>Terugbetaling op school (per 30 minuten):</span>
                       <span className="font-semibold">20,73 euro</span>
                     </li>
                   </ul>
