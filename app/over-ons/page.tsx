@@ -187,13 +187,7 @@ function Team() {
           {team.map((person, index) => (
             <MotionCard key={index} index={index}>
               <li>
-                <div className="aspect-3/2 w-full rounded-2xl bg-gray-200 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-gray-300 rounded-full mx-auto mb-2"></div>
-                    <p className="text-sm text-gray-500">Foto volgt</p>
-                  </div>
-                </div>
-                <h3 className="mt-6 text-lg/8 font-semibold tracking-tight text-gray-900">
+                <h3 className="text-lg/8 font-semibold tracking-tight text-gray-900">
                   {person.name}
                 </h3>
                 <ul className="list-disc list-outside ml-4 space-y-1">
