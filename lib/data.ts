@@ -237,16 +237,7 @@ export const aanbod: Aanbod[] = [
       {
         title: "Ontwikkelingsstimulatie bij jonge kinderen",
         description: ["Binnen de therapie zetten we in op psychomotorische ontwikkelingsstimulatie, waarbij beweging en interactie dienen als basis voor het versterken van communicatie, zelfregulatie en spelvaardigheden."],
-        details: [
-          {
-            type: 'paragraph',
-            content: "Deze aanpak richt zich specifiek op jonge kinderen die baat hebben bij extra ondersteuning in hun ontwikkeling. Door middel van gerichte bewegingsoefeningen en interactieve spelactiviteiten stimuleren we niet alleen de motorische ontwikkeling, maar ook de cognitieve en sociale vaardigheden."
-          },
-          {
-            type: 'paragraph',
-            content: "We werken vanuit een holistische benadering waarbij het kind centraal staat. Elke sessie wordt aangepast aan de individuele behoeften en ontwikkelingsfase van het kind, met als doel het versterken van het zelfvertrouwen en de autonomie."
-          }
-        ]
+        details: null
       },
       {
         title: "Musculosceletale kinesitherapie",
