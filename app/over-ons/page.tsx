@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import type { Metadata } from "next";
 import { MotionHeader, MotionCard } from "@/lib/Animations";
 
