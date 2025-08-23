@@ -271,15 +271,19 @@ export const aanbod: Aanbod[] = [
       },
       {
         title: "Neuromotorische therapie",
-        description: ["Neuromotorische therapie richt zich op kinderen met neurologische aandoeningen die hun beweging en ontwikkeling beïnvloeden."],
+        description: ["Therapie voor kinderen met neurologische en neuromusculaire aandoeningen of syndromen die hun motorische ontwikkeling beïnvloeden."],
         details: [
           {
             type: 'paragraph',
-            content: "Bij neurologische aandoeningen kan de normale ontwikkeling van beweging en houding verstoord zijn. Door middel van gerichte therapie helpen we kinderen om hun motorische vaardigheden te optimaliseren en hun zelfstandigheid te vergroten."
+            content: "We richten ons op kinderen met o.a. cerebrale parese (CP), spierziekten, zenuwaandoeningen of genetische syndromen."
           },
           {
             type: 'paragraph',
-            content: "We werken met verschillende technieken en benaderingen, altijd aangepast aan de specifieke behoeften van het kind. De therapie richt zich op het verbeteren van de kwaliteit van beweging, het ontwikkelen van compensatiestrategieën en het ondersteunen van de algehele ontwikkeling."
+            content: "Onze therapie vertrekt steeds vanuit de mogelijkheden en leeftijd van het kind. Met de Bobath-principes als basis werken we spelenderwijs aan houding, balans, coördinatie en functionele bewegingen. Het doel? Je kind zoveel mogelijk kans geven om zich te ontwikkelen én zelfstandig te worden."
+          },
+          {
+            type: 'paragraph',
+            content: "Daarnaast ondersteunen we bij het gebruik van orthopedische hulpmiddelen (bv. spalken, rolstoel, loophulpmiddelen) en betrekken we actief het zorgnetwerk rondom het kind. Zo zorgen we samen voor een omgeving die je kind optimaal ondersteunt."
           }
         ]
       }
