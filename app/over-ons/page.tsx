@@ -58,11 +58,9 @@ const team = [
   {
     name: "Jana Fonteyn",
     slug: "jana-fonteyn" as const,
-    role: "Logopediste",
+    role: "Logopedist",
     imageUrl: "/profiles/jana.jpg",
-    skills: [
-      "Communicatietraining bij jonge kinderen met ontwikkelingsstoornis",
-    ],
+    skills: [],
     // xUrl: "#",
     // linkedinUrl: "#",
   },
@@ -71,7 +69,7 @@ const team = [
     slug: "leen-van-rampelberg" as const,
     role: "Kinesitherapeut",
     imageUrl: "/profiles/leen.jpg",
-    skills: ["Kinesitherapie"],
+    skills: [],
     // xUrl: "#",
     // linkedinUrl: "#",
   },
@@ -80,12 +78,7 @@ const team = [
     slug: "sofie-de-pauw" as const,
     role: "Kinesitherapeut",
     imageUrl: "/profiles/sofie.jpg",
-    skills: [
-      "Voorkeurshoudingen en ontwikkelingsstimulatie bij baby’s en jonge kinderen",
-      "Psychomotoriek",
-      "Neurologische revalidatie",
-      "Musculoskeletale revalidatie",
-    ],
+    skills: [],
     // xUrl: "#",
     // linkedinUrl: "#",
   },
@@ -187,18 +180,12 @@ function Team() {
           {team.map((person, index) => (
             <MotionCard key={index} index={index}>
               <li>
-                <h3 className="text-lg/8 font-semibold tracking-tight text-gray-900">
-                  {person.name}
-                </h3>
-                <ul className="list-disc list-outside ml-4 space-y-1">
-                  {person.skills.map((skill, index) => (
-                    <li key={index}>
-                      <span className="text-gray-800 hover:text-gray-600">
-                        {skill}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+                <div>
+                  <h3 className="text-lg/8 font-semibold tracking-tight text-gray-900">
+                    {person.name}
+                  </h3>
+                  <p className="text-gray-600 mt-1">{person.role}</p>
+                </div>
               </li>
             </MotionCard>
           ))}

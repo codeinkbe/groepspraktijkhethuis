@@ -89,7 +89,7 @@ function Kinesitherapie() {
             <div className="lg:max-w-lg">
               <h2 className="text-base/7 font-semibold text-orange">Diensten</h2>
               <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-navy sm:text-5xl">
-                {kinesitherapieData?.title}: Jouw lichaam in beweging
+                {kinesitherapieData?.title}: jouw lichaam in beweging
               </p>
               <p className="mt-6 text-lg/8 text-navy">
                 {kinesitherapieData?.description}

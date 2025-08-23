@@ -176,15 +176,19 @@ export const aanbod: Aanbod[] = [
       },
       {
         title: "Ontwikkelingsstimulatie bij baby's",
-        description: ["In de eerste maanden en jaren maken baby's grote stappen in hun ontwikkeling."],
+        description: ["In de eerste maanden en jaren zetten baby's enorme stappen in hun ontwikkeling."],
         details: [
           {
             type: 'paragraph',
-            content: "Tijdens deze motorische ontwikkeling doorloopt het kind een aantal motorische mijlpalen (zich oprichten in buiklig, omrollen, zitten, zich rechttrekken tot stand, kruipen, stappen,…). Bij sommige kinderen verloopt deze ontwikkeling minder vanzelfsprekend. De mijlpalen ontwikkelen zich op een andere manier, in een andere volgorde of op een later tijdstip."
+            content: "Tijdens deze motorische ontwikkeling doorloopt het kind een aantal motorische mijlpalen (zich oprichten in buiklig, rollen, zitten, kruipen, en uiteindelijk stappen. Bij sommige kinderen verloopt dit proces minder vanzelfsprekend: de mijlpalen komen later, in een andere volgorde of ontwikkelen zich wat anders dan verwacht."
           },
           {
             type: 'paragraph',
-            content: "Tijdens ontwikkelingsstimulatie zal getracht worden om de typische ontwikkeling zoveel mogelijk te stimuleren door specifieke oefeningen. Er wordt nauw samengewerkt met de ouders zodat de aangereikte oefeningen ook in de thuissituatie kunnen worden toegepast."
+            content: "Ook een voorkeurshouding kan voorkomen: een baby kijkt of ligt dan vaak naar één kant. Wanneer dit regelmatig gebeurt, krijgt je kindje soms minder prikkels om beide kanten van het lichaam even goed te gebruiken."
+          },
+          {
+            type: 'paragraph',
+            content: "Binnen de therapie stimuleren we de motorische ontwikkeling zoveel mogelijk op een speelse en natuurlijke manier. We werken nauw samen met de ouders, zodat de tips en oefeningen ook thuis eenvoudig kunnen worden toegepast."
           }
         ]
       },
@@ -240,12 +244,42 @@ export const aanbod: Aanbod[] = [
         details: null
       },
       {
-        title: "Musculosceletale kinesitherapie",
-        description: ["Musculoskeletale kinesitherapie bij kinderen richt zich op het behandelen van problemen met het bewegingsapparaat (spieren, botten, gewrichten, pezen en banden) bij kinderen."],
+        title: "Musculoskeletale therapie",
+        description: ["In onze musculoskeletale therapie ondersteunen we kinderen bij problemen met houding, beweging en spierkracht."],
         details: [
           {
             type: 'paragraph',
-            content: "Dit kan variëren van revalidatie na blessures of operaties tot het behandelen van aangeboren afwijkingen of ontwikkelingsproblemen."
+            content: "Deze klachten kunnen ontstaan door een blessure, operatie, aangeboren aandoeningen of medische behandelingen, zoals oncologische therapie. Onze aanpak is altijd afgestemd op de leeftijd en mogelijkheden van het kind. Met gerichte oefeningen verbeteren we de kracht, stabiliteit en uithoudingsvermogen, op een speelse en positieve manier. Zo kan je kind zich weer comfortabel, zelfverzekerd en vrij bewegen."
+          },
+          {
+            type: 'paragraph',
+            content: "Enkele voorbeelden:"
+          },
+          {
+            type: 'list',
+            content: [
+              "Hypermobiliteit of hyperlaxiteit",
+              "Houdings-of groeiproblemen (scoliose, hyperlordose, heupdysplasie, klompvoetjes, platvoeten,…)",
+              "Revalidatie na trauma of operatie",
+              "(Sport)blessures",
+              "Auto-immuunziekten (kinderreuma,…)",
+              "Oncologische revalidatie",
+              "Tiplopen"
+            ]
+          }
+        ]
+      },
+      {
+        title: "Neuromotorische therapie",
+        description: ["Neuromotorische therapie richt zich op kinderen met neurologische aandoeningen die hun beweging en ontwikkeling beïnvloeden."],
+        details: [
+          {
+            type: 'paragraph',
+            content: "Bij neurologische aandoeningen kan de normale ontwikkeling van beweging en houding verstoord zijn. Door middel van gerichte therapie helpen we kinderen om hun motorische vaardigheden te optimaliseren en hun zelfstandigheid te vergroten."
+          },
+          {
+            type: 'paragraph',
+            content: "We werken met verschillende technieken en benaderingen, altijd aangepast aan de specifieke behoeften van het kind. De therapie richt zich op het verbeteren van de kwaliteit van beweging, het ontwikkelen van compensatiestrategieën en het ondersteunen van de algehele ontwikkeling."
           }
         ]
       }
