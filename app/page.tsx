@@ -124,7 +124,7 @@ export type TestimonialType = [
 
 function VisieSection() {
   const title = "Onze visie"
-  const description = "Welkom bij het Huis! Een multidisciplinaire praktijk die therapie op maat biedt voor kinderen tussen 0 en 18 jaar.\nHet Huis is een warme en veilige plek voor onze patiënten en hun omgeving, Voor ons staan vertrouwen,\ngroei, positiviteit en betrokkenheid centraal."
+  const description = "Welkom bij het Huis! Een multidisciplinaire praktijk die therapie op maat biedt voor kinderen tussen 0 en 18 jaar.\nHet Huis is een warme en veilige plek voor onze patiënten en hun omgeving. Voor ons staan vertrouwen,\ngroei, positiviteit en betrokkenheid centraal."
   return (
     <div className="bg-cream px-6 py-24 sm:py-32 lg:px-8 flex items-center justify-center" id="visie">
       <div className="mx-auto max-w-2xl text-center">
