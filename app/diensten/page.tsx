@@ -112,7 +112,7 @@ function Kinesitherapie() {
               src={kinesitherapieData?.image || "/images/kinesitherapie.jpg"}
               width={1000}
               height={1000}
-              className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228"
+              className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0"
             />
           </MotionImage>
         </div>
