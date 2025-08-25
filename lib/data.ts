@@ -180,7 +180,7 @@ export const aanbod: Aanbod[] = [
         details: [
           {
             type: 'paragraph',
-            content: "Tijdens deze motorische ontwikkeling doorloopt het kind een aantal motorische mijlpalen (zich oprichten in buiklig, rollen, zitten, kruipen, en uiteindelijk stappen. Bij sommige kinderen verloopt dit proces minder vanzelfsprekend: de mijlpalen komen later, in een andere volgorde of ontwikkelen zich wat anders dan verwacht."
+            content: "Tijdens deze motorische ontwikkeling doorloopt het kind een aantal motorische mijlpalen: zich oprichten in buiklig, rollen, zitten, kruipen, en uiteindelijk stappen. Bij sommige kinderen verloopt dit proces minder vanzelfsprekend: de mijlpalen komen later, in een andere volgorde of ontwikkelen zich wat anders dan verwacht."
           },
           {
             type: 'paragraph',
