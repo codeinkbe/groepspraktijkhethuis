@@ -32,7 +32,7 @@ const navigation = {
     },
     {
       name: 'Instagram',
-      href: '#',
+      href: 'https://www.instagram.com/hethuis_groepspraktijk/?igsh=MTRrem9pY21nbmptYg%3D%3D&utm_source=qr#',
       icon: (props: React.SVGProps<SVGSVGElement>) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
