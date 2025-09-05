@@ -138,7 +138,7 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 gap-x-8 gap-y-6">
               <div>
                 <label htmlFor="childName" className="block text-sm/6 font-semibold text-gray-900">
-                  Naam kind
+                  Naam kind *
                 </label>
                 <div className="mt-2.5">
                   <input
@@ -154,7 +154,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <label htmlFor="age" className="block text-sm/6 font-semibold text-gray-900">
-                  Leeftijd
+                  Leeftijd *
                 </label>
                 <div className="mt-2.5">
                   <input
@@ -172,7 +172,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm/6 font-semibold text-gray-900">
-                  E-mailadres
+                  E-mailadres *
                 </label>
                 <div className="mt-2.5">
                   <input
@@ -189,7 +189,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <label htmlFor="phoneNumber" className="block text-sm/6 font-semibold text-gray-900">
-                  GSM nummer
+                  GSM nummer *
                 </label>
                 <div className="mt-2.5">
                   <input
@@ -206,7 +206,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <label htmlFor="serviceType" className="block text-sm/6 font-semibold text-gray-900">
-                  Keuze
+                  Type begeleiding *
                 </label>
                 <div className="mt-2.5">
                   <select
