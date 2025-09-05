@@ -167,7 +167,6 @@ export default function ContactPage() {
                     name="age"
                     type="number"
                     min="0"
-                    max="18"
                     value={formData.age}
                     onChange={handleChange}
                     required
