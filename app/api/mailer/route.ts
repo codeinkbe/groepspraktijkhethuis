@@ -9,10 +9,10 @@ export async function POST(request: NextRequest) {
     console.log('Mailer API called at:', new Date().toISOString());
     console.log('Environment check - RESEND_API_KEY exists:', !!process.env.RESEND_API_KEY);
     
-    const { firstName, lastName, email, phoneNumber, message } = await request.json();
+    const { childName, age, email, phoneNumber, serviceType, helpRequest } = await request.json();
 
     // Validate required fields
-    if (!firstName || !lastName || !email || !phoneNumber || !message) {
+    if (!childName || !age || !email || !phoneNumber || !serviceType || !helpRequest) {
       console.log('Validation failed - missing fields');
       return NextResponse.json(
         { error: 'Alle velden zijn verplicht' },
@@ -45,27 +45,29 @@ export async function POST(request: NextRequest) {
     const { data, error } = await resend.emails.send({
       from: 'Groepspraktijk Het Huis <noreply@groepspraktijkhethuis.be>',
       to: ['info@groepspraktijkhethuis.be'],
-      subject: `Nieuwe aanvraag van ${firstName} ${lastName}`,
+      subject: `Nieuwe aanmelding: ${serviceType} voor ${childName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
           <h2 style="color: #416a7b; border-bottom: 2px solid #f15e2c; padding-bottom: 10px;">
-            Nieuwe contactaanvraag
+            Nieuwe aanmelding
           </h2>
           
           <div style="background-color: #f7efe1; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="color: #416a7b; margin-top: 0;">Contactgegevens</h3>
-            <p><strong>Naam:</strong> ${firstName} ${lastName}</p>
+            <h3 style="color: #416a7b; margin-top: 0;">Aanmeldingsgegevens</h3>
+            <p><strong>Naam kind:</strong> ${childName}</p>
+            <p><strong>Leeftijd:</strong> ${age} jaar</p>
             <p><strong>E-mail:</strong> ${email}</p>
-            <p><strong>Telefoon:</strong> ${phoneNumber}</p>
+            <p><strong>GSM nummer:</strong> ${phoneNumber}</p>
+            <p><strong>Aanmelding voor:</strong> ${serviceType}</p>
           </div>
           
           <div style="background-color: #c4e2f7; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="color: #416a7b; margin-top: 0;">Bericht</h3>
-            <p style="white-space: pre-wrap; line-height: 1.6;">${message}</p>
+            <h3 style="color: #416a7b; margin-top: 0;">Hulpvraag</h3>
+            <p style="white-space: pre-wrap; line-height: 1.6;">${helpRequest}</p>
           </div>
           
           <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666;">
-            <p>Dit bericht werd verzonden via het contactformulier op groepspraktijkhethuis.be</p>
+            <p>Deze aanmelding werd verzonden via het contactformulier op groepspraktijkhethuis.be</p>
             <p>Verzonden op: ${new Date().toLocaleString('nl-BE', { 
               timeZone: 'Europe/Brussels',
               year: 'numeric',
@@ -89,7 +91,7 @@ export async function POST(request: NextRequest) {
 
     console.log('Email sent successfully:', data);
     return NextResponse.json(
-      { message: 'Bericht succesvol verzonden!' },
+      { message: 'Aanmelding succesvol verzonden!' },
       { status: 200 }
     );
 

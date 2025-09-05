@@ -4,11 +4,12 @@ import { useState } from 'react'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    childName: '',
+    age: '',
     email: '',
     phoneNumber: '',
-    message: ''
+    serviceType: '',
+    helpRequest: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
@@ -29,7 +30,7 @@ export default function ContactPage() {
 
       if (response.ok) {
         setSubmitStatus('success')
-        setFormData({ firstName: '', lastName: '', email: '', phoneNumber: '', message: '' })
+        setFormData({ childName: '', age: '', email: '', phoneNumber: '', serviceType: '', helpRequest: '' })
       } else {
         setSubmitStatus('error')
       }
@@ -134,18 +135,17 @@ export default function ContactPage() {
               </div>
             )}
             
-            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-x-8 gap-y-6">
               <div>
-                <label htmlFor="firstName" className="block text-sm/6 font-semibold text-gray-900">
-                  Voornaam
+                <label htmlFor="childName" className="block text-sm/6 font-semibold text-gray-900">
+                  Naam kind
                 </label>
                 <div className="mt-2.5">
                   <input
-                    id="firstName"
-                    name="firstName"
+                    id="childName"
+                    name="childName"
                     type="text"
-                    autoComplete="given-name"
-                    value={formData.firstName}
+                    value={formData.childName}
                     onChange={handleChange}
                     required
                     className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-orange"
@@ -153,23 +153,24 @@ export default function ContactPage() {
                 </div>
               </div>
               <div>
-                <label htmlFor="lastName" className="block text-sm/6 font-semibold text-gray-900">
-                  Achternaam
+                <label htmlFor="age" className="block text-sm/6 font-semibold text-gray-900">
+                  Leeftijd
                 </label>
                 <div className="mt-2.5">
                   <input
-                    id="lastName"
-                    name="lastName"
-                    type="text"
-                    autoComplete="family-name"
-                    value={formData.lastName}
+                    id="age"
+                    name="age"
+                    type="number"
+                    min="0"
+                    max="18"
+                    value={formData.age}
                     onChange={handleChange}
                     required
                     className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-orange"
                   />
                 </div>
               </div>
-              <div className="sm:col-span-2">
+              <div>
                 <label htmlFor="email" className="block text-sm/6 font-semibold text-gray-900">
                   E-mailadres
                 </label>
@@ -186,9 +187,9 @@ export default function ContactPage() {
                   />
                 </div>
               </div>
-              <div className="sm:col-span-2">
+              <div>
                 <label htmlFor="phoneNumber" className="block text-sm/6 font-semibold text-gray-900">
-                  Telefoonnummer
+                  GSM nummer
                 </label>
                 <div className="mt-2.5">
                   <input
@@ -203,16 +204,35 @@ export default function ContactPage() {
                   />
                 </div>
               </div>
-              <div className="sm:col-span-2">
+              <div>
+                <label htmlFor="serviceType" className="block text-sm/6 font-semibold text-gray-900">
+                  Keuze
+                </label>
+                <div className="mt-2.5">
+                  <select
+                    id="serviceType"
+                    name="serviceType"
+                    value={formData.serviceType}
+                    onChange={handleChange}
+                    required
+                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-orange"
+                  >
+                    <option value="">Selecteer een optie</option>
+                    <option value="logopedie">Aanmelding logopedie</option>
+                    <option value="kinesitherapie">Aanmelding kinesitherapie</option>
+                  </select>
+                </div>
+              </div>
+              <div>
                 <label htmlFor="message" className="block text-sm/6 font-semibold text-gray-900">
-                  Bericht
+                  Hulpvraag: waarmee kunnen we je helpen?
                 </label>
                 <div className="mt-2.5">
                   <textarea
-                    id="message"
-                    name="message"
+                    id="helpRequest"
+                    name="helpRequest"
                     rows={4}
-                    value={formData.message}
+                    value={formData.helpRequest}
                     onChange={handleChange}
                     required
                     className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-orange"
