@@ -1,7 +1,7 @@
 'use client'
 import { BuildingOffice2Icon, EnvelopeIcon } from '@heroicons/react/24/outline'
 import { useState } from 'react'
-import type { Metadata } from 'next'
+// import type { Metadata } from 'next'
 
 // Note: Since this is a client component, we can't export metadata directly
 // The metadata should be handled by a parent server component or layout
