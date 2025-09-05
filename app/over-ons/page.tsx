@@ -1,4 +1,5 @@
 // import Image from "next/image";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { MotionHeader, MotionCard } from "@/lib/Animations";
 
@@ -180,6 +181,13 @@ function Team() {
           {team.map((person, index) => (
             <MotionCard key={index} index={index}>
               <li>
+                <Image
+                  alt=""
+                  src={person.imageUrl}
+                  className="aspect-3/2 w-full rounded-2xl object-cover"
+                  width={300}
+                  height={200}
+                />
                 <div>
                   <h3 className="text-lg/8 font-semibold tracking-tight text-gray-900">
                     {person.name}
