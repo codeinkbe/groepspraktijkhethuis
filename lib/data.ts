@@ -165,12 +165,12 @@ export const aanbod: Aanbod[] = [
           },
           {
             type: 'title',
-            content: "Ruimtelijk-visuele vaardigheden",
+            content: "Visueel-ruimtelijke vaardigheden",
             level: 2
           },
           {
             type: 'paragraph',
-            content: "Ruimtelijk-visuele vaardigheden helpen kinderen om vormen, afstanden en plaatsing in de ruimte goed te begrijpen. Dit is belangrijk voor bijvoorbeeld schrijven, puzzelen en oriënteren. Door spel en gerichte oefeningen stimuleren we deze vaardigheden, zodat uw kind zich beter kan concentreren en makkelijker leert."
+            content: "Visueel-ruimtelijke vaardigheden helpen kinderen om vormen, afstanden en plaatsing in de ruimte goed te begrijpen. Dit is belangrijk voor bijvoorbeeld schrijven, puzzelen en oriënteren. Door spel en gerichte oefeningen stimuleren we deze vaardigheden, zodat uw kind zich beter kan concentreren en makkelijker leert."
           }
         ]
       },
