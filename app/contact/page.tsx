@@ -1,6 +1,10 @@
 'use client'
 import { BuildingOffice2Icon, EnvelopeIcon } from '@heroicons/react/24/outline'
 import { useState } from 'react'
+import type { Metadata } from 'next'
+
+// Note: Since this is a client component, we can't export metadata directly
+// The metadata should be handled by a parent server component or layout
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -41,12 +45,13 @@ export default function ContactPage() {
     }
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
     }))
   }
+
   return (
     <div className="relative isolate bg-white">
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
@@ -119,7 +124,7 @@ export default function ContactPage() {
             {/* Status Messages */}
             {submitStatus === 'success' && (
               <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md">
-                <p className="text-green-800">Bericht succesvol verzonden! We nemen zo snel mogelijk contact met je op.</p>
+                <p className="text-green-800">Aanmelding succesvol verzonden! We nemen zo snel mogelijk contact met je op.</p>
               </div>
             )}
             {submitStatus === 'error' && (
@@ -224,7 +229,7 @@ export default function ContactPage() {
                 </div>
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm/6 font-semibold text-gray-900">
+                <label htmlFor="helpRequest" className="block text-sm/6 font-semibold text-gray-900">
                   Hulpvraag: waarmee kunnen we je helpen?
                 </label>
                 <div className="mt-2.5">
