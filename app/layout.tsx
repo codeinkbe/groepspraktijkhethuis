@@ -37,14 +37,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Plausible domain="groepspraktijkhethuis.be" />
+      </head>
       <body
         className={`${acuminRegular.variable} ${acuminItalic.variable} ${acuminBold.variable} ${acuminBoldItalic.variable} antialiased bg-cream`}
       >
-        <Plausible domain="groepspraktijkhethuis.be">
-          <TopMenuBar />
-          {children}
-          <FooterSection />
-        </Plausible>
+        <TopMenuBar />
+        {children}
+        <FooterSection />
       </body>
     </html>
   );
