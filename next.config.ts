@@ -8,4 +8,6 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default withPlausibleProxy()(nextConfig);
+export default withPlausibleProxy({
+  customDomain: "https://analytics.codeink.be", // <-- Add it here too
+})(nextConfig);
