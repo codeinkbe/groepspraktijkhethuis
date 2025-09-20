@@ -3,6 +3,7 @@ import "./globals.css";
 import TopMenuBar from "@/app/components/TopMenuBar";
 import FooterSection from "@/app/components/FooterSection";
 import localFont from "next/font/local";
+import Plausible from "next-plausible";
 
 const acuminRegular = localFont({
   src: "../public/font/Acumin-RPro.woff",
@@ -39,9 +40,11 @@ export default function RootLayout({
       <body
         className={`${acuminRegular.variable} ${acuminItalic.variable} ${acuminBold.variable} ${acuminBoldItalic.variable} antialiased bg-cream`}
       >
-        <TopMenuBar />
-        {children}
-        <FooterSection />
+        <Plausible domain="groepspraktijkhethuis.be">
+          <TopMenuBar />
+          {children}
+          <FooterSection />
+        </Plausible>
       </body>
     </html>
   );
