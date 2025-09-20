@@ -38,7 +38,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <PlausibleProvider domain="groepspraktijkhethuis.be" customDomain="https://analytics.codeink.be" trackLocalhost={true} />
+        <PlausibleProvider
+          domain="groepspraktijkhethuis.be"
+          customDomain="https://analytics.codeink.be"
+          // trackLocalhost={true}
+        />
       </head>
       <body
         className={`${acuminRegular.variable} ${acuminItalic.variable} ${acuminBold.variable} ${acuminBoldItalic.variable} antialiased bg-cream`}
