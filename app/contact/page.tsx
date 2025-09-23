@@ -1,12 +1,14 @@
 'use client'
 import { BuildingOffice2Icon, EnvelopeIcon } from '@heroicons/react/24/outline'
 import { useState } from 'react'
+import { useTrackEvent } from '@/hooks/useTrackEvent';
 // import type { Metadata } from 'next'
 
 // Note: Since this is a client component, we can't export metadata directly
 // The metadata should be handled by a parent server component or layout
 
 export default function ContactPage() {
+  const track = useTrackEvent();
   const [formData, setFormData] = useState({
     childName: '',
     age: '',
@@ -248,6 +250,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
+                onClick={() => track('Nav Click', { link: 'Verstuur bericht' })}
                 className="rounded-2xl bg-orange px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-orange-600 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? 'Versturen...' : 'Verstuur bericht'}

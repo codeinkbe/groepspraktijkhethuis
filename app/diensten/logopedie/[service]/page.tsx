@@ -1,6 +1,6 @@
 import React from 'react'
 // import Image from 'next/image'
-import Link from 'next/link'
+import PlausibleLink from '@/app/components/PlausibleLink'
 // import { CheckCircleIcon, InformationCircleIcon } from '@heroicons/react/20/solid'
 // import ContactSection from '../../../components/ContactSection'
 import { aanbod, RichTextContent } from '@/lib/data'
@@ -77,9 +77,9 @@ export default async function ServicePage({ params }: ServicePageProps) {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-semibold text-navy mb-4">Service niet gevonden</h1>
-          <Link href="/diensten" className="text-orange hover:underline">
+          <PlausibleLink href="/diensten" eventProps={{ link: 'Terug naar diensten' }} className="text-orange hover:underline">
             Terug naar diensten
-          </Link>
+          </PlausibleLink>
         </div>
       </div>
     );
@@ -101,18 +101,20 @@ export default async function ServicePage({ params }: ServicePageProps) {
               <RichTextRenderer content={serviceItem.details} />
             )}
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Link 
+              <PlausibleLink 
                 href="/contact" 
+                eventProps={{ link: 'Afspraak maken' }}
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-2xl text-white bg-orange hover:bg-orange/90 transition-colors"
               >
                 Afspraak maken
-              </Link>
-              <Link 
+              </PlausibleLink>
+              <PlausibleLink 
                 href="/diensten#logopedie" 
+                eventProps={{ link: 'Terug naar diensten' }}
                 className="inline-flex items-center px-6 py-3 border border-orange text-base font-medium rounded-2xl text-orange bg-transparent hover:bg-orange hover:text-white transition-colors"
               >
                 Terug naar diensten
-              </Link>
+              </PlausibleLink>
             </div>
           </div>
         </div>

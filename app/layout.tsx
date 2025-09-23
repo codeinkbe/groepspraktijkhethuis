@@ -41,7 +41,7 @@ export default function RootLayout({
         <PlausibleProvider
           domain="groepspraktijkhethuis.be"
           customDomain="https://analytics.codeink.be"
-          // trackLocalhost={true}
+          trackLocalhost={true}
         />
       </head>
       <body

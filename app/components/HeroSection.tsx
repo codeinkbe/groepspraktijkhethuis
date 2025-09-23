@@ -3,8 +3,10 @@
 import React from 'react'
 import { useRive } from '@rive-app/react-canvas';
 import { FadeHeader } from '../../lib/Animations';
+import { useTrackEvent } from '@/hooks/useTrackEvent';
 
 export default function HeroSection() {
+    const track = useTrackEvent();
     const { RiveComponent } = useRive({
         src: '/rive/hethuis.riv',
         autoplay: true,
@@ -34,7 +36,7 @@ export default function HeroSection() {
             </div>
             
             <div className="pb-8 flex flex-col items-center justify-center space-y-2">
-                <a href="#visie" className="text-sm font-semibold text-cream hover:text-sky transition-colors px-3 py-2 rounded-2xl">
+                <a href="#visie" className="text-sm font-semibold text-cream hover:text-sky transition-colors px-3 py-2 rounded-2xl" onClick={() => track('Nav Click', { link: 'Lees meer' })}>
                     Lees meer
                 </a>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-cream">

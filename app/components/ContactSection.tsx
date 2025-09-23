@@ -1,5 +1,6 @@
 import { MotionHeader } from "@/lib/Animations";
 import Link from "next/link";
+import PlausibleLink from "@/app/components/PlausibleLink";
 import React from "react";
 
 export default function ContactSection() {
@@ -19,11 +20,11 @@ export default function ContactSection() {
           </MotionHeader>
         </div>
 
-        <Link href="/contact">
+        <PlausibleLink href="/contact" eventProps={{ link: "Afspraak maken" }}>
           <button className="bg-white text-navy px-4 py-2 rounded-2xl mt-6 hover:bg-navy-light hover:text-white transition-colors cursor-pointer font-bold">
             Afspraak maken
           </button>
-        </Link>
+        </PlausibleLink>
       </div>
     </div>
   );

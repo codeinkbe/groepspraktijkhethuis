@@ -5,6 +5,7 @@ import { Metadata } from "next";
 import HeroSection from "@/app/components/HeroSection";
 import ContactSection from "@/app/components/ContactSection";
 import Link from "next/link";
+import PlausibleLink from "@/app/components/PlausibleLink";
 
 //todo: Metadata correct aanvullen:
 export const metadata: Metadata = {
@@ -176,9 +177,13 @@ function ShortOverviewSection() {
                     <p className="mt-5 line-clamp-3 text-navy-light">{post.description}</p>
                   </div>
 
-                  <Link href={post.link} className={`rounded-2xl bg-orange px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-orange-light transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible mt-5`}>
+                  <PlausibleLink
+                    href={post.link}
+                    eventProps={{ link: post.title }}
+                    className={`rounded-2xl bg-orange px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-orange-light transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible mt-5`}
+                  >
                     Meer informatie
-                  </Link>
+                  </PlausibleLink>
                 </div>
               </article>
             </MotionCard>

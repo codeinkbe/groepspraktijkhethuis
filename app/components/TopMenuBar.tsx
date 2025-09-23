@@ -10,7 +10,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { usePlausible } from "next-plausible";
+import { useTrackEvent } from "@/hooks/useTrackEvent";
 
 const navigation = [
   {
@@ -49,16 +49,12 @@ const navigation = [
 ];
 
 export default function TopMenuBar() {
+  const track = useTrackEvent();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
   const pathname = usePathname();
-  const plausible = usePlausible();
 
-  // Plausible: 3. Create a handler function to send the event
-  const trackLinkClick = (linkName: string) => {
-    plausible("Nav Click", { props: { link: linkName } });
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -98,7 +94,7 @@ export default function TopMenuBar() {
           <Link
             href="/"
             className={`-m-1.5 p-1.5 ${isScrolled ? "block" : "hidden"}`}
-            onClick={() => trackLinkClick('Logo')}
+            onClick={() => track('Nav Click', { link: 'Logo' })}
           >
             <span className="sr-only">Groepspraktijk Het Huis</span>
             <Image
@@ -127,7 +123,7 @@ export default function TopMenuBar() {
             <div key={item.name} className="relative group">
               <Link
                 href={item.href}
-                onClick={() => trackLinkClick(item.name)}
+                onClick={() => track('Nav Click', { link: item.name })}
                 className={`flex items-center gap-1 text-sm/6 font-semibold  transition-colors ${
                   isScrolled
                     ? "text-navy hover:text-orange"
@@ -156,7 +152,7 @@ export default function TopMenuBar() {
                       <Link
                         key={subItem.name}
                         href={subItem.href}
-                        onClick={() => trackLinkClick(subItem.name)}
+                        onClick={() => track('Nav Click', { link: subItem.name })}
                         className="block px-4 py-2 text-sm text-navy hover:text-white hover:bg-orange transition-colors"
                       >
                         {subItem.name}
@@ -171,7 +167,7 @@ export default function TopMenuBar() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
             href="/contact"
-            onClick={() => trackLinkClick('Afspraak maken')}
+            onClick={() => track('Nav Click', { link: 'Afspraak maken' })}
             className={`rounded-2xl bg-orange px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-orange-light transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible ${
               isScrolled ? "opacity-100 visible" : "opacity-0 invisible"
             }`}
@@ -188,7 +184,7 @@ export default function TopMenuBar() {
         <div className="fixed inset-0 z-50" />
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-navy p-6 sm:max-w-sm sm:ring-1 sm:ring-cream/20">
           <div className="flex items-center justify-between">
-            <Link href="/" className="-m-1.5 p-1.5">
+            <Link href="/" className="-m-1.5 p-1.5" onClick={() => track('Nav Click', { link: 'Home Logo' })}>
               <span className="sr-only">Groepspraktijk Het Huis</span>
               <Image
                 alt=""
@@ -216,7 +212,7 @@ export default function TopMenuBar() {
                       href={item.href}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-cream hover:bg-navy-light transition-colors"
                       onClick={() => {
-                        trackLinkClick(item.name);
+                        track('Nav Click', { link: item.name });
                         closeMobileMenu();
                     }}
                     >
@@ -230,7 +226,7 @@ export default function TopMenuBar() {
                             href={subItem.href}
                             className="block rounded-lg px-3 py-2 text-sm text-cream-light hover:text-orange hover:bg-navy-light transition-colors"
                             onClick={() => {
-                                trackLinkClick(subItem.name);
+                                track('Nav Click', { link: subItem.name });
                                 closeMobileMenu();
                             }}
                           >
@@ -247,7 +243,7 @@ export default function TopMenuBar() {
                   href="/contact"
                   className="-mx-3 block rounded-2xl px-3 py-2.5 text-base/7 font-semibold text-cream hover:bg-navy-light transition-colors"
                   onClick={() => {
-                    trackLinkClick('Afspraak maken');
+                    track('Nav Click', { link: 'Afspraak maken' });
                     closeMobileMenu();
                 }}
                 >

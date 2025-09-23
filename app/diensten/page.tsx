@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import ContactSection from '../components/ContactSection'
-import Link from 'next/link'
+import PlausibleLink from '@/app/components/PlausibleLink'
 import { MotionHeader, MotionSection, MotionImage } from '@/lib/Animations'
 import { aanbod } from '@/lib/data'
 
@@ -53,9 +53,9 @@ function Logopedie() {
               </p>
               <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2">
                 {logopedieData?.items.map((item, index) => (
-                  <Link href={`/diensten/logopedie/${item.title}`} key={index}>
+                  <PlausibleLink href={`/diensten/logopedie/${item.title}`} key={index} eventProps={{ link: item.title }}>
                     <SubItem title={item.title} />
-                  </Link>
+                  </PlausibleLink>
                 ))}
               </div>
               {/* <p className="mt-8 text-lg/8 text-navy font-medium">
@@ -96,9 +96,9 @@ function Kinesitherapie() {
               </p>
               <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2">
                 {kinesitherapieData?.items.map((item, index) => (
-                  <Link href={`/diensten/kinesitherapie/${item.title}`} key={index}>
+                  <PlausibleLink href={`/diensten/kinesitherapie/${item.title}`} key={index} eventProps={{ link: item.title }}>
                     <SubItem title={item.title} />
-                  </Link>
+                  </PlausibleLink>
                 ))}
               </div>
               {/* <p className="mt-8 text-lg/8 text-navy font-medium">

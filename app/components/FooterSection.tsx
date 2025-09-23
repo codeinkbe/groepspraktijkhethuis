@@ -1,3 +1,5 @@
+import PlausibleLink from "@/app/components/PlausibleLink";
+
 const navigation = {
   services: [
     { name: 'Kinesitherapie', href: '/diensten#kinesitherapie' },
@@ -58,9 +60,9 @@ export default function FooterSection() {
             <ul className="space-y-2">
               {navigation.services.map((item) => (
                 <li key={item.name}>
-                  <a href={item.href} className="text-cream-light hover:text-orange transition-colors">
+                  <PlausibleLink href={item.href} eventProps={{ link: item.name }} className="text-cream-light hover:text-orange transition-colors">
                     {item.name}
-                  </a>
+                  </PlausibleLink>
                 </li>
               ))}
             </ul>
@@ -72,9 +74,9 @@ export default function FooterSection() {
             <ul className="space-y-2">
               {navigation.pages.map((item) => (
                 <li key={item.name}>
-                  <a href={item.href} className="text-cream-light hover:text-orange transition-colors">
+                  <PlausibleLink href={item.href} eventProps={{ link: item.name }} className="text-cream-light hover:text-orange transition-colors">
                     {item.name}
-                  </a>
+                  </PlausibleLink>
                 </li>
               ))}
             </ul>
@@ -96,10 +98,10 @@ export default function FooterSection() {
             {/* Social links */}
             <div className="flex gap-x-4">
               {navigation.social.map((item) => (
-                <a key={item.name} href={item.href} className="text-cream-light hover:text-orange transition-colors">
+                <PlausibleLink key={item.name} href={item.href} eventProps={{ link: item.name }} className="text-cream-light hover:text-orange transition-colors">
                   <span className="sr-only">{item.name}</span>
                   <item.icon aria-hidden="true" className="size-5" />
-                </a>
+                </PlausibleLink>
               ))}
             </div>
           </div>
