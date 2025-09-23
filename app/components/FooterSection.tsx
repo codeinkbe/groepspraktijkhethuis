@@ -85,13 +85,13 @@ export default function FooterSection() {
         <div className="border-t border-navy-light pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             {/* Legal links */}
-            <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+            {/* <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2">
               {navigation.legal.map((item) => (
                 <a key={item.name} href={item.href} className="text-sm text-cream-light hover:text-orange transition-colors">
                   {item.name}
                 </a>
               ))}
-            </nav>
+            </nav> */}
 
             {/* Social links */}
             <div className="flex gap-x-4">
