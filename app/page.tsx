@@ -4,7 +4,6 @@ import Image from "next/image";
 import { Metadata } from "next";
 import HeroSection from "@/app/components/HeroSection";
 import ContactSection from "@/app/components/ContactSection";
-import Link from "next/link";
 import PlausibleLink from "@/app/components/PlausibleLink";
 
 //todo: Metadata correct aanvullen:
