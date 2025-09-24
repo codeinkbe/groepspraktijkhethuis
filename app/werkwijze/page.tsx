@@ -2,11 +2,7 @@ import React from "react";
 import Image from "next/image";
 import type { Metadata } from "next";
 import ContactSection from "../components/ContactSection";
-import {
-  MotionHeader,
-  MotionSection,
-  MotionImage,
-} from "@/lib/Animations";
+import { MotionHeader, MotionSection, MotionImage } from "@/lib/Animations";
 
 export const metadata: Metadata = {
   title: "Werkwijze",
@@ -116,12 +112,11 @@ function Wachten() {
                 Werkwijze
               </h2>
               <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
-                Wachttijd 
+                Wachttijd
               </p>
               <p className="mt-6 text-lg/8 text-gray-600">
-                Op dit moment is er geen wachtlijst. Na jullie aanmelding via de
-                website nemen we snel contact op om te bespreken hoe we jullie
-                het best kunnen ondersteunen.
+                Na jullie aanmelding via de website nemen we snel contact op om
+                te bespreken hoe we jullie het best kunnen ondersteunen.
               </p>
             </div>
           </MotionSection>
@@ -158,8 +153,12 @@ function Tarieven() {
               </p>
               <div className="mt-6 text-lg/8 text-gray-600 space-y-8">
                 <div>
-                  <h3 className="text-xl font-semibold text-navy mb-4">Logopedie</h3>
-                  <p className="text-sm text-gray-500 mb-4">Alle logopedisten zijn geconventioneerd.</p>
+                  <h3 className="text-xl font-semibold text-navy mb-4">
+                    Logopedie
+                  </h3>
+                  <p className="text-sm text-gray-500 mb-4">
+                    Alle logopedisten zijn geconventioneerd.
+                  </p>
                   <ul className="space-y-2 text-sm">
                     <li className="flex justify-between">
                       <span>Onderzoek (per 30 minuten):</span>
@@ -179,13 +178,19 @@ function Tarieven() {
                     </li>
                     <li className="flex justify-between">
                       <span>Terugbetaling via aanvullende verzekering:</span>
-                      <span className="font-semibold">Na te vragen bij uw mutualiteit</span>
+                      <span className="font-semibold">
+                        Na te vragen bij uw mutualiteit
+                      </span>
                     </li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-navy mb-4">Kinesitherapie</h3>
-                  <p className="text-sm text-gray-500 mb-4">Alle kinesitherapeuten zijn gedeconventioneerd.</p>
+                  <h3 className="text-xl font-semibold text-navy mb-4">
+                    Kinesitherapie
+                  </h3>
+                  <p className="text-sm text-gray-500 mb-4">
+                    Alle kinesitherapeuten zijn gedeconventioneerd.
+                  </p>
                   <ul className="space-y-2 text-sm">
                     <li className="flex justify-between">
                       <span>Onderzoek (per 30 minuten):</span>
@@ -200,7 +205,9 @@ function Tarieven() {
                       <span className="font-semibold">41 euro</span>
                     </li>
                     <li className="flex justify-between">
-                      <span>Terugbetaling in de praktijk (per 30 minuten):</span>
+                      <span>
+                        Terugbetaling in de praktijk (per 30 minuten):
+                      </span>
                       <span className="font-semibold">18,41 euro</span>
                     </li>
                     <li className="flex justify-between">

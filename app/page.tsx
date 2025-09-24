@@ -9,7 +9,7 @@ import PlausibleLink from "@/app/components/PlausibleLink";
 //todo: Metadata correct aanvullen:
 export const metadata: Metadata = {
   title: 'Groepspraktijk Het Huis | Multidisciplinaire Praktijk',
-  description: 'Multidisciplinaire praktijk voor kinderen en volwassenen, gespecialiseerd in logopedie, kinesitherapie en persoonlijke begeleiding op maat.',
+  description: 'Multidisciplinaire praktijk voor kinderen, gespecialiseerd in logopedie, kinesitherapie en persoonlijke begeleiding op maat.',
   keywords: ['logopedie', 'kinesitherapie', 'multidisciplinair', 'groepspraktijk', 'het huis', 'therapie', 'begeleiding'],
   authors: [{ name: 'Groepspraktijk Het Huis' }],
   creator: 'Groepspraktijk Het Huis',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     locale: 'nl_BE',
     url: 'https://groepspraktijkhethuis.be',
     title: 'Groepspraktijk Het Huis | Multidisciplinaire Praktijk',
-    description: 'Multidisciplinaire praktijk voor kinderen en volwassenen, gespecialiseerd in logopedie, kinesitherapie en persoonlijke begeleiding op maat.',
+    description: 'Multidisciplinaire praktijk voor kinderen, gespecialiseerd in logopedie, kinesitherapie en persoonlijke begeleiding op maat.',
     siteName: 'Groepspraktijk Het Huis',
     images: [
       {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Groepspraktijk Het Huis | Multidisciplinaire Praktijk',
-    description: 'Multidisciplinaire praktijk voor kinderen en volwassenen, gespecialiseerd in logopedie, kinesitherapie en persoonlijke begeleiding op maat.',
+    description: 'Multidisciplinaire praktijk voor kinderen, gespecialiseerd in logopedie, kinesitherapie en persoonlijke begeleiding op maat.',
     images: ['/heroimage.jpg'],
   },
   robots: {
