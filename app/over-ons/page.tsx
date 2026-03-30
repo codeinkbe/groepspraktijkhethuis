@@ -1,7 +1,7 @@
-// import Image from "next/image";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { MotionHeader, MotionCard } from "@/lib/Animations";
+import ImageCarousel from "@/app/components/ImageCarousel";
 
 export const metadata: Metadata = {
   title: "Over Ons | Groepspraktijk Het Huis",
@@ -208,6 +208,7 @@ export default function OverOnsPage() {
     <>
       <Header />
       <Team />
+      <ImageCarousel />
     </>
   );
 }

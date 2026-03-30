@@ -86,10 +86,10 @@ function Aanmelden() {
           <MotionImage className="flex items-start justify-end lg:order-first">
             <Image
               alt="Product screenshot"
-              src="/images/werkwijze.jpg"
+              src="/img/werkwijze-hoeaanmelden.JPG"
               width={2432}
               height={1442}
-              className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 object-cover h-full"
+              className="w-full rounded-xl shadow-xl ring-1 ring-gray-400/10 object-cover max-h-92"
             />
           </MotionImage>
         </div>
@@ -123,10 +123,10 @@ function Wachten() {
           <MotionImage className="flex items-start justify-end lg:order-last">
             <Image
               alt="Product screenshot"
-              src="/images/wachten.jpg"
+              src="/img/werkwijze-wachttijd.JPG"
               width={2432}
               height={1442}
-              className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 object-cover max-h-92"
+              className="w-full rounded-xl shadow-xl ring-1 ring-gray-400/10 object-cover max-h-92"
             />
           </MotionImage>
         </div>
@@ -222,10 +222,10 @@ function Tarieven() {
           <MotionImage className="flex items-start justify-end lg:order-first">
             <Image
               alt="Tarieven"
-              src="/images/aanmelden.jpg"
+              src="/img/werkwijze-tarieven.JPG"
               width={2432}
               height={1442}
-              className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 object-cover h-full"
+              className="w-full rounded-xl shadow-xl ring-1 ring-gray-400/10 object-cover max-h-92"
             />
           </MotionImage>
         </div>

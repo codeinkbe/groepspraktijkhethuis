@@ -19,7 +19,7 @@ export const aanbod: Aanbod[] = [
   {
     title: "Logopedie",
     description: "Logopedie helpt je bij moeilijkheden met communicatie in de breedste zin van het woord. Wij kunnen je begeleiden bij verschillende aspecten van spraak, taal en communicatie.",
-    image: "/images/logopedie.jpg",
+    image: "/img/logopedie-banner.webp",
     items: [
       {
         title: "Communicatieve training",
@@ -135,7 +135,7 @@ export const aanbod: Aanbod[] = [
   {
     title: "Kinesitherapie",
     description: "Kinesitherapie richt zich op het herstellen en verbeteren van je lichamelijk functioneren. Je kan bij ons terecht voor verschillende vormen van bewegings- en ontwikkelingsondersteuning.",
-    image: "/images/kinesitherapie.jpg",
+    image: "/img/kinesitherapie-banner.webp",
     items: [
       {
         title: "Psychomotoriek",
