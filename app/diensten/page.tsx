@@ -69,7 +69,7 @@ function Logopedie() {
               src={logopedieData?.image || "/images/logopedie.jpg"}
               width={1000}
               height={1000}
-              className="w-full rounded-xl shadow-xl ring-1 ring-white/10 object-cover max-h-[32rem]"
+              className="w-full rounded-xl shadow-xl ring-1 ring-white/10 object-cover"
             />
           </MotionImage>
         </div>
@@ -112,7 +112,7 @@ function Kinesitherapie() {
               src={kinesitherapieData?.image || "/images/kinesitherapie.jpg"}
               width={1000}
               height={1000}
-              className="w-full rounded-xl shadow-xl ring-1 ring-gray-400/10 object-cover max-h-[32rem]"
+              className="w-full rounded-xl shadow-xl ring-1 ring-gray-400/10 object-cover"
             />
           </MotionImage>
         </div>

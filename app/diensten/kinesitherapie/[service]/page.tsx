@@ -1,5 +1,5 @@
 import React from 'react'
-// import Image from 'next/image'
+import Image from 'next/image'
 import PlausibleLink from '@/app/components/PlausibleLink'
 // import { CheckCircleIcon, InformationCircleIcon } from '@heroicons/react/20/solid'
 // import ContactSection from '../../../components/ContactSection'
@@ -96,6 +96,15 @@ export default async function ServicePage({ params }: ServicePageProps) {
           <p className="mt-6 text-xl/8 text-navy">
             {serviceItem.description}
           </p>
+          {serviceItem.image && (
+            <Image
+              src={serviceItem.image}
+              alt={serviceItem.title}
+              width={1200}
+              height={900}
+              className="mt-10 h-auto w-full rounded-xl"
+            />
+          )}
           <div className="mt-10 max-w-2xl text-gray-600">
             {serviceItem.details && (
               <RichTextRenderer content={serviceItem.details} />

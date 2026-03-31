@@ -78,7 +78,7 @@ const posts = [
     description:
       'Een kinesitherapeut helpt kinderen met (psycho)motorische, neurologische, respiratoire of orthopedische moeilijkheden.',
     imageUrl:
-      '/img/homepage-kinesitherapie.webp',
+      '/img/foto1.webp',
     date: 'Mar 16, 2020',
     datetime: '2020-03-16',
     category: { title: 'Marketing', href: '#' },
@@ -91,7 +91,7 @@ const posts = [
     description:
       'Een logopedist helpt kinderen die het moeilijk hebben met communicatie, articulatie, taal- of leermoeilijkheden',
     imageUrl:
-      '/img/homepage-logopedie.JPG',
+      '/img/foto2.webp',
     date: 'Mar 16, 2020',
     datetime: '2020-03-16',
     category: { title: 'Marketing', href: '#' },
