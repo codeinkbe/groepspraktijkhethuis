@@ -281,7 +281,7 @@ export const aanbod: Aanbod[] = [
       {
         title: "Neuromotorische therapie",
         description: ["Therapie voor kinderen met neurologische en neuromusculaire aandoeningen of syndromen die hun motorische ontwikkeling beïnvloeden."],
-        image: "/img/foto7.webp",
+        image: "/img/foto7.JPG",
         details: [
           {
             type: 'paragraph',
