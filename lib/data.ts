@@ -11,6 +11,7 @@ export interface Aanbod {
   items: {
     title: string;
     description: string[];
+    image?: string;
     details?: RichTextContent[] | null;
   }[];
 }
@@ -19,11 +20,12 @@ export const aanbod: Aanbod[] = [
   {
     title: "Logopedie",
     description: "Logopedie helpt je bij moeilijkheden met communicatie in de breedste zin van het woord. Wij kunnen je begeleiden bij verschillende aspecten van spraak, taal en communicatie.",
-    image: "/images/logopedie.jpg",
+    image: "/img/foto2.JPG",
     items: [
       {
         title: "Communicatieve training",
         description: ["Sommige jonge kinderen komen niet vanzelf tot spreken. In onze communicatietraining ondersteunen we hen stap voor stap in hun ontwikkeling."],
+        image: "/img/foto8.webp",
         details: [
           {
             type: 'paragraph',
@@ -42,6 +44,7 @@ export const aanbod: Aanbod[] = [
       {
         title: "Taalstoornissen",
         description: ["Soms ontwikkelt de taal van een kind wat trager dan je zou verwachten. De eerste woordjes laten op zich wachten, er worden rond 2 jaar nog geen woorden gecombineerd tot korte zinnetjes."],
+        image: "/img/foto9.webp",
         details: [
           {
             type: 'paragraph',
@@ -56,6 +59,7 @@ export const aanbod: Aanbod[] = [
       {
         title: "Articulatiestoornissen",
         description: ["Spreekt jouw kind anders dan leeftijdsgenootjes? Zijn sommige klanken lastig om goed uit te spreken? Of kom je kind soms niet goed uit zijn woorden als het iets wil vertellen?"],
+        image: "/img/foto10.webp",
         details: [
           {
             type: 'paragraph',
@@ -81,6 +85,7 @@ export const aanbod: Aanbod[] = [
       {
         title: "Leerstoornissen",
         description: ["Sommige kinderen ondervinden moeilijkheden bij het leren lezen, schrijven of rekenen. Wij bieden gerichte remediëring om deze leerprocessen te ondersteunen, met aandacht voor het zelfvertrouwen, motivatie en leerplezier van het kind."],
+        image: "/img/foto11.webp",
         details: [
           {
             type: 'paragraph',
@@ -135,11 +140,12 @@ export const aanbod: Aanbod[] = [
   {
     title: "Kinesitherapie",
     description: "Kinesitherapie richt zich op het herstellen en verbeteren van je lichamelijk functioneren. Je kan bij ons terecht voor verschillende vormen van bewegings- en ontwikkelingsondersteuning.",
-    image: "/images/kinesitherapie.jpg",
+    image: "/img/foto1.JPG",
     items: [
       {
         title: "Psychomotoriek",
         description: ["Psychomotoriek richt zich op de samenhang tussen bewegen, voelen en het psychisch functioneren van een kind."],
+        image: "/img/foto3.webp",
         details: [
           {
             type: 'paragraph',
@@ -209,6 +215,7 @@ export const aanbod: Aanbod[] = [
       {
         title: "Relaxatietherapie",
         description: ["Al van kinderleeftijd wordt er in onze maatschappij veel verwacht. Er zijn veel prikkels en verwachtingen, ze ervaren druk van thuis uit, prestatiedruk op school, in de sportclub, van vriendjes,..."],
+        image: "/img/foto4.webp",
         details: [
           {
             type: 'paragraph',
@@ -241,11 +248,13 @@ export const aanbod: Aanbod[] = [
       {
         title: "Ontwikkelingsstimulatie bij jonge kinderen",
         description: ["Binnen de therapie zetten we in op psychomotorische ontwikkelingsstimulatie, waarbij beweging en interactie dienen als basis voor het versterken van communicatie, zelfregulatie en spelvaardigheden."],
+        image: "/img/foto5.webp",
         details: null
       },
       {
         title: "Musculoskeletale therapie",
         description: ["In onze musculoskeletale therapie ondersteunen we kinderen bij problemen met houding, beweging en spierkracht."],
+        image: "/img/foto6.webp",
         details: [
           {
             type: 'paragraph',
@@ -272,6 +281,7 @@ export const aanbod: Aanbod[] = [
       {
         title: "Neuromotorische therapie",
         description: ["Therapie voor kinderen met neurologische en neuromusculaire aandoeningen of syndromen die hun motorische ontwikkeling beïnvloeden."],
+        image: "/img/foto7.JPG",
         details: [
           {
             type: 'paragraph',

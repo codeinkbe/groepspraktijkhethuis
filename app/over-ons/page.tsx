@@ -1,4 +1,3 @@
-// import Image from "next/image";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { MotionHeader, MotionCard } from "@/lib/Animations";
@@ -88,7 +87,7 @@ const team = [
 function Header() {
   return (
     <div className="relative isolate px-6 pt-14 lg:px-8">
-      <div className="mx-auto max-w-3xl py-32 sm:py-48 lg:py-56">
+      <div className="mx-auto max-w-5xl py-32 sm:py-48 lg:py-56">
         <div className="text-center">
           <MotionHeader delay={0.2}>
             <h1 className="text-5xl font-semibold tracking-tight text-balance text-navy sm:text-7xl">
@@ -101,7 +100,7 @@ function Header() {
               groei komt in een veilige en ondersteunende omgeving. Wij creëren
               een plek waar kinderen en ouders zich welkom en gehoord voelen.
               Onze focus ligt niet alleen op het kind, maar ook op de omgeving
-              die hen ondersteunt. Daarnaast hechten we veel waarde aan
+              die hen ondersteunt.<br /><br />Daarnaast hechten we veel waarde aan
               samenwerking met andere zorgverleners, scholen en andere betrokken
               organisaties. Door open communicatie en samenwerking zorgen we
               ervoor dat de zorg rondom het kind optimaal aansluit bij hun
@@ -109,6 +108,16 @@ function Header() {
               logopedie als kinesitherapie, met bijzondere aandacht voor het
               emotionele en sociale welzijn van de kinderen.
             </p>
+          </MotionHeader>
+          <MotionHeader delay={0.6}>
+            <Image
+              alt="Het team van Groepspraktijk Het Huis"
+              src="/img/foto12.JPG"
+              width={1200}
+              height={800}
+              className="mt-12 w-full rounded-2xl object-cover max-h-[28rem]"
+              priority
+            />
           </MotionHeader>
         </div>
       </div>

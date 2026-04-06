@@ -86,10 +86,10 @@ function Aanmelden() {
           <MotionImage className="flex items-start justify-end lg:order-first">
             <Image
               alt="Product screenshot"
-              src="/images/werkwijze.jpg"
+              src="/img/foto13.JPG"
               width={2432}
               height={1442}
-              className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 object-cover h-full"
+              className="w-full rounded-xl shadow-xl ring-1 ring-gray-400/10 object-cover max-h-92"
             />
           </MotionImage>
         </div>
@@ -102,12 +102,11 @@ function Wachten() {
   return (
     <div className="overflow-hidden bg-cream py-24 sm:py-32" id="wachttijd">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <div className="mx-auto max-w-2xl">
           <MotionSection
             direction="right"
-            className="lg:ml-auto lg:pt-4 lg:pl-4 lg:order-first"
           >
-            <div className="lg:max-w-lg">
+            <div>
               <h2 className="text-base/7 font-semibold text-orange">
                 Werkwijze
               </h2>
@@ -120,15 +119,6 @@ function Wachten() {
               </p>
             </div>
           </MotionSection>
-          <MotionImage className="flex items-start justify-end lg:order-last">
-            <Image
-              alt="Product screenshot"
-              src="/images/wachten.jpg"
-              width={2432}
-              height={1442}
-              className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 object-cover max-h-92"
-            />
-          </MotionImage>
         </div>
       </div>
     </div>
@@ -222,10 +212,10 @@ function Tarieven() {
           <MotionImage className="flex items-start justify-end lg:order-first">
             <Image
               alt="Tarieven"
-              src="/images/aanmelden.jpg"
+              src="/img/foto14.JPG"
               width={2432}
               height={1442}
-              className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 object-cover h-full"
+              className="w-full rounded-xl shadow-xl ring-1 ring-gray-400/10 object-cover max-h-92"
             />
           </MotionImage>
         </div>
