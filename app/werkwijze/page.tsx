@@ -152,19 +152,23 @@ function Tarieven() {
                   <ul className="space-y-2 text-sm">
                     <li className="flex justify-between">
                       <span>Onderzoek (per 30 minuten):</span>
-                      <span className="font-semibold">44,18 euro</span>
+                      <span className="font-semibold">45,38 euro</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>Evaluatiezitting:</span>
+                      <span className="font-semibold">76,73 euro</span>
                     </li>
                     <li className="flex justify-between">
                       <span>Therapie in de praktijk (per 30 minuten):</span>
-                      <span className="font-semibold">37,35 euro</span>
+                      <span className="font-semibold">38,37 euro</span>
                     </li>
                     <li className="flex justify-between">
                       <span>Therapie op school (per 30 minuten):</span>
-                      <span className="font-semibold">40,35 euro</span>
+                      <span className="font-semibold">47,06 euro</span>
                     </li>
                     <li className="flex justify-between">
                       <span>Terugbetaling via RIZIV:</span>
-                      <span className="font-semibold">31,85 euro</span>
+                      <span className="font-semibold">32,87 euro</span>
                     </li>
                     <li className="flex justify-between">
                       <span>Terugbetaling via aanvullende verzekering:</span>
@@ -184,25 +188,25 @@ function Tarieven() {
                   <ul className="space-y-2 text-sm">
                     <li className="flex justify-between">
                       <span>Onderzoek (per 30 minuten):</span>
-                      <span className="font-semibold">37 euro</span>
+                      <span className="font-semibold">38 euro</span>
                     </li>
                     <li className="flex justify-between">
                       <span>Therapie in de praktijk (per 30 minuten):</span>
-                      <span className="font-semibold">37 euro</span>
+                      <span className="font-semibold">38 euro</span>
                     </li>
                     <li className="flex justify-between">
                       <span>Therapie op school (per 30 minuten):</span>
-                      <span className="font-semibold">41 euro</span>
+                      <span className="font-semibold">42 euro</span>
                     </li>
                     <li className="flex justify-between">
                       <span>
                         Terugbetaling in de praktijk (per 30 minuten):
                       </span>
-                      <span className="font-semibold">18,41 euro</span>
+                      <span className="font-semibold">19,61 euro</span>
                     </li>
                     <li className="flex justify-between">
                       <span>Terugbetaling op school (per 30 minuten):</span>
-                      <span className="font-semibold">20,73 euro</span>
+                      <span className="font-semibold">22,13 euro</span>
                     </li>
                   </ul>
                 </div>

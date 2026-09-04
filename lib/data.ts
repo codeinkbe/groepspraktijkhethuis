@@ -108,33 +108,34 @@ export const aanbod: Aanbod[] = [
           }
         ]
       },
-      {
-        title: "Afwijkende mondgewoonten",
-        description: ["Mondademhaling, duim- of vingerzuigen, speenzuigen, nagelbijten, foutieve tong- of lipgewoonten tijdens rust, slikken of spreken, het zijn allemaal vormen van afwijkend mondgedrag."],
-        details: [
-          {
-            type: 'paragraph',
-            content: "Ze lijken onschuldig, maar kunnen leiden tot een verstoord evenwicht in de mondspieren en een afwijkende stand van tanden of kaken."
-          },
-          {
-            type: 'title',
-            content: "Oromyofunctionele therapie (OMFT)",
-            level: 2
-          },
-          {
-            type: 'paragraph',
-            content: "Binnen de oromyofunctionele therapie (OMFT) onderzoeken we welke mondgewoonten fout verlopen en hoe dit het evenwicht tussen de spieren in en rond de mond beïnvloedt."
-          },
-          {
-            type: 'paragraph',
-            content: "Deze therapie vormt een belangrijke basis voor een goede kaak- en tandontwikkeling én helpt om terugval na orthodontie te voorkomen."
-          },
-          {
-            type: 'paragraph',
-            content: "We starten deze therapie vanaf de leeftijd van 5 jaar, afhankelijk van de mondmotorische ontwikkeling van het kind."
-          }
-        ]
-      }
+      // Tijdelijk verborgen op vraag van de praktijk, mogelijk komt dit later terug.
+      // {
+      //   title: "Afwijkende mondgewoonten",
+      //   description: ["Mondademhaling, duim- of vingerzuigen, speenzuigen, nagelbijten, foutieve tong- of lipgewoonten tijdens rust, slikken of spreken, het zijn allemaal vormen van afwijkend mondgedrag."],
+      //   details: [
+      //     {
+      //       type: 'paragraph',
+      //       content: "Ze lijken onschuldig, maar kunnen leiden tot een verstoord evenwicht in de mondspieren en een afwijkende stand van tanden of kaken."
+      //     },
+      //     {
+      //       type: 'title',
+      //       content: "Oromyofunctionele therapie (OMFT)",
+      //       level: 2
+      //     },
+      //     {
+      //       type: 'paragraph',
+      //       content: "Binnen de oromyofunctionele therapie (OMFT) onderzoeken we welke mondgewoonten fout verlopen en hoe dit het evenwicht tussen de spieren in en rond de mond beïnvloedt."
+      //     },
+      //     {
+      //       type: 'paragraph',
+      //       content: "Deze therapie vormt een belangrijke basis voor een goede kaak- en tandontwikkeling én helpt om terugval na orthodontie te voorkomen."
+      //     },
+      //     {
+      //       type: 'paragraph',
+      //       content: "We starten deze therapie vanaf de leeftijd van 5 jaar, afhankelijk van de mondmotorische ontwikkeling van het kind."
+      //     }
+      //   ]
+      // }
     ]
   },
   {
